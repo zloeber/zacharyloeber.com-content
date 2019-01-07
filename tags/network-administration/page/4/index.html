@@ -7,7 +7,7 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> Network Administration | Zachary Loeber&#39;s Site</title>
+        <title> Network Administration | Zachary Loeber</title>
         <meta name="description" content="Network Administration - Zachary Loeber&#39;s Personal Site">
         <meta itemprop="name" content="Network Administration">
         <meta itemprop="description" content="Network Administration - Zachary Loeber&#39;s Personal Site">
@@ -15,13 +15,13 @@
         <meta property="og:description" content="Network Administration - Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/tags/network-administration/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/tags/network-administration/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/tags/network-administration/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/tags/network-administration/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/tags/network-administration/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2013/06/28/exchange-2010-mailbox-audit-report-gui/">
+                <a class="bubble" href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,22 +105,20 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2013/06/28/exchange-2010-mailbox-audit-report-gui/">Exchange 2010 Mailbox Audit Report GUI</a></h3>
+    <h3><a href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/">Gather (and Diagram) Installed Roles and Features With Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2013-06-28</span>
+                <span class="date moment">2013-12-18</span>
             
         
 
         
-            <span class="readingTime">3 min read</span>
+            <span class="readingTime">1 min read</span>
         
 
         
             <span class="categories">
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
@@ -137,10 +135,10 @@
     </div>
 
     
-        <p>I’ve updated the original <a href="/2013/05/09/exchange-2010-mailbox-audit-report-script/">Exchange Mailbox Audit Report Script</a> with some new features and bug fixes. These updates have also set the stage for the entire script to be wrapped with a GUI! Here is the initial release of the Mailbox Audit Report GUI for your auditing needs.</p>
+        <p>Use this powershell script to gather installed features and roles from remote systems. This uses two wmi classes in an attempt to gather as much information as possible. Win32_ServerFeature will contain roles and their dependencies on systems running Windows 2008 and above. For these systems we can use this hierarchy to also produce pretty diagrams using graphviz and techniques I&#8217;ve exhibited in some of my other scripts (I added this last part in cause it is easy to do, not really certain how useful it is other than maybe exploring the dependencies between windows roles/features).</p>
 
         
-            <a href="/blog/2013/06/28/exchange-2010-mailbox-audit-report-gui/" class="more">Continue reading</a>
+            <a href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
@@ -154,15 +152,13 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/active-directory">Active Directory</a>
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
                     <a href="/tags/microsoft">Microsoft</a>
                 
                     <a href="/tags/network-administration">network administration</a>
                 
                     <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
                 
                     <a href="/tags/scripting">Scripting</a>
                 
@@ -186,7 +182,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2013/06/25/enhanced-remote-server-connectivity-testing-with-powershell/">
+                <a class="bubble" href="/blog/2013/10/16/gather-remote-event-logs-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -194,386 +190,20 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2013/06/25/enhanced-remote-server-connectivity-testing-with-powershell/">Enhanced Remote Server Connectivity Testing With Powershell</a></h3>
+    <h3><a href="/blog/2013/10/16/gather-remote-event-logs-with-powershell/">Gather Remote Event Logs With Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2013-06-25</span>
+                <span class="date moment">2013-10-16</span>
             
         
 
         
-            <span class="readingTime">2 min read</span>
+            <span class="readingTime">1 min read</span>
         
 
         
             <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>Test the following connectivity methods to a server: RDP, ping, rpc, wsman, sccm agent, scom agent, and remote registry. Optionally an alternate credential can be used. Versatility is added with options to return only true/false when singular tests are performed.</p>
-
-        
-            <a href="/blog/2013/06/25/enhanced-remote-server-connectivity-testing-with-powershell/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/monitoring">Monitoring</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/06/23/use-powershell-to-gather-diskpartitionmount-point-information/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/06/23/use-powershell-to-gather-diskpartitionmount-point-information/">Use Powershell to Gather Disk/Partition/Mount Point Information</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-06-24</span>
-            
-        
-
-        
-            <span class="readingTime">3 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/storage">Storage</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>I put together a function for remotely gathering Windows disk information. This was specifically written to accommodate alternate credentials. This script also accounts for the glaring disconnect between win32_Volume and win32_DiskDrive within WMI.</p>
-
-        
-            <a href="/blog/2013/06/23/use-powershell-to-gather-diskpartitionmount-point-information/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/2008-r2">2008 R2</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/monitoring">Monitoring</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/06/21/audit-user-profile-folders-with-powershell/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/06/21/audit-user-profile-folders-with-powershell/">Audit User Profile Folders With Powershell</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-06-21</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>This function will aggregate sub-folders within a folder on a server and attempt to associate them with user IDs within a domain and provide additional information. This script can also be used to move folders for disabled or non-existent accounts.</p>
-
-        
-            <a href="/blog/2013/06/21/audit-user-profile-folders-with-powershell/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/active-directory">Active Directory</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/06/18/book-review-powershell-3-0-advanced-administration-handbook/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/06/18/book-review-powershell-3-0-advanced-administration-handbook/">Book Review: PowerShell 3.0 Advanced Administration Handbook</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-06-19</span>
-            
-        
-
-        
-            <span class="readingTime">4 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/book-review">Book Review</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/other">Other</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>A fast-paced PowerShell guide with real-world scenarios and detailed solutions</p>
-
-        
-            <a href="/blog/2013/06/18/book-review-powershell-3-0-advanced-administration-handbook/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/book-review">Book Review</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/06/17/use-powershell-to-create-a-windows-service-dependency-diagrams/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/06/17/use-powershell-to-create-a-windows-service-dependency-diagrams/">Use Powershell to Create a Windows Service Dependency Diagrams</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-06-17</span>
-            
-        
-
-        
-            <span class="readingTime">3 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/powershell">Powershell</a>
                 
@@ -590,10 +220,12 @@
     </div>
 
     
-        <p>I use powershell with graphviz to generate color coded service dependency diagrams for windows services. Besides creating useful and beautiful diagrams for your environment, this will also provide some interesting functions for gathering remote service information with alternate credentials.</p>
+        About Gather the remote event log information for one or more systems using wmi, alternate credentials, and multiple runspaces. Function supports custom timeout parameters in case of wmi problems and returns Event Log information for the specified number of past hours. You can view verbose information on each runspace thread in realtime with the -Verbose option.
+Version History 1.0.0 &#8211; 10/16/2013
+ Initial release  Notes By default 24 hours is what we filter against for the results.
 
         
-            <a href="/blog/2013/06/17/use-powershell-to-create-a-windows-service-dependency-diagrams/" class="more">Continue reading</a>
+            <a href="/blog/2013/10/16/gather-remote-event-logs-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
@@ -611,6 +243,8 @@
                 
                     <a href="/tags/network-administration">network administration</a>
                 
+                    <a href="/tags/networking">Networking</a>
+                
                     <a href="/tags/powershell">Powershell</a>
                 
                     <a href="/tags/scripting">Scripting</a>
@@ -618,6 +252,8 @@
                     <a href="/tags/sysadmin">Sysadmin</a>
                 
                     <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
@@ -633,7 +269,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2013/05/09/exchange-2010-mailbox-audit-report-script/">
+                <a class="bubble" href="/blog/2013/10/06/visualize-active-directory-site-connections/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -641,30 +277,26 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2013/05/09/exchange-2010-mailbox-audit-report-script/">Exchange 2010 Mailbox Audit Report Script</a></h3>
+    <h3><a href="/blog/2013/10/06/visualize-active-directory-site-connections/">Visualize Active Directory Site Connections</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2013-05-10</span>
+                <span class="date moment">2013-10-06</span>
             
         
 
         
-            <span class="readingTime">5 min read</span>
+            <span class="readingTime">1 min read</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
+                    <a href="/categories/active-directory">Active Directory</a>
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/security">Security</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -677,12 +309,10 @@
     </div>
 
     
-        <h1 id="exchange-2010-mailbox-audit-report-script">Exchange 2010 Mailbox Audit Report Script</h1>
-
-<p>Recently I’ve released a number of scripts such as the <a href="http://gallery.technet.microsoft.com/Colorize-HTML-Table-Cells-2ea63acd">HTML Table Colorizer</a>, <a href="http://gallery.technet.microsoft.com/Get-Exchange-Calendar-5bb4f527">Exchange Mailbox Calendar Permission Function</a>, and the <a href="http://gallery.technet.microsoft.com/Exchange-Mailbox-GUI-5b204590">Exchange Mailbox GUI</a>. These were all actually created specifically as support scripts for a report generation powershell tool I’ve been working on, the Exchange Mailbox Auditing Tool.</p>
+        <h4 id="span-style-color-bbbbbb-font-size-12px-font-weight-normal-line-height-1-6-in-this-post-i-use-powershell-with-graphviz-to-create-an-active-directory-diagram-of-all-site-connections-between-servers-additionally-i-ve-included-some-code-which-displays-site-connection-options-you-may-be-able-to-use-this-to-find-isolated-dcs-or-just-to-see-a-pretty-diagram-span"><span style="color: #bbbbbb; font-size: 12px; font-weight: normal; line-height: 1.6;">In this post I use powershell with graphviz to create an Active Directory diagram of all site connections between servers. Additionally, I’ve included some code which displays site connection options. You may be able to use this to find isolated DCs or just to see a pretty diagram.</span></h4>
 
         
-            <a href="/blog/2013/05/09/exchange-2010-mailbox-audit-report-script/" class="more">Continue reading</a>
+            <a href="/blog/2013/10/06/visualize-active-directory-site-connections/" class="more">Continue reading</a>
         
     
 </div>
@@ -698,17 +328,13 @@
                 
                     <a href="/tags/active-directory">Active Directory</a>
                 
-                    <a href="/tags/exchange">Exchange</a>
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
                     <a href="/tags/microsoft">Microsoft</a>
                 
                     <a href="/tags/network-administration">network administration</a>
                 
                     <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/security">Security</a>
+                    <a href="/tags/scripting">Scripting</a>
                 
                     <a href="/tags/sysadmin">Sysadmin</a>
                 

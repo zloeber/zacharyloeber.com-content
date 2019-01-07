@@ -7,21 +7,21 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> Zachary Loeber | Zachary Loeber&#39;s Site</title>
-        <meta name="description" content="Zachary Loeber - Zachary Loeber&#39;s Personal Site">
-        <meta itemprop="name" content="Zachary Loeber">
-        <meta itemprop="description" content="Zachary Loeber - Zachary Loeber&#39;s Personal Site">
-        <meta property="og:title" content="Zachary Loeber">
-        <meta property="og:description" content="Zachary Loeber - Zachary Loeber&#39;s Personal Site">
+        <title> The personal website of Zachary Loeber. | Zachary Loeber</title>
+        <meta name="description" content="Zachary Loeber&#39;s Personal Site">
+        <meta itemprop="name" content="The personal website of Zachary Loeber.">
+        <meta itemprop="description" content="Zachary Loeber&#39;s Personal Site">
+        <meta property="og:title" content="The personal website of Zachary Loeber.">
+        <meta property="og:description" content="Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/author/zachary-loeber/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/author/zachary-loeber/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/author/zachary-loeber/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/author/zachary-loeber/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/author/zachary-loeber/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2012/09/29/exchange-automatically-generating-configuration-scripts/">
+                <a class="bubble" href="/blog/2014/11/13/lync-and-um-correlation-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,16 +105,16 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2012/09/29/exchange-automatically-generating-configuration-scripts/">Exchange: Automatically Generating Configuration Scripts</a></h3>
+    <h3><a href="/blog/2014/11/13/lync-and-um-correlation-with-powershell/">Lync and UM Correlation with Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2012-09-29</span>
+                <span class="date moment">2014-11-14</span>
             
         
 
         
-            <span class="readingTime">4 min read</span>
+            <span class="readingTime">5 min read</span>
         
 
         
@@ -126,11 +126,15 @@
                 
                     <a href="/categories/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/categories/iis">IIS</a>
+                    <a href="/categories/exchange-2013">Exchange 2013</a>
+                
+                    <a href="/categories/lync">Lync</a>
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/security">Security</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -143,74 +147,11 @@
     </div>
 
     
-        <p>I&#8217;ve started a side project which is born from personally having to redo many aspects of an Exchange migration over and over again. Most of this, I believe, can be automated. Some aspects of this process include exchange server role prerequisite procedures, co-existence configuration, DAG/CAS configuration, and other general reminders and processes.</p>
+        I&#8217;ve been working on an Exchange/Lync voice deployment lately and have found a new level of frustration for the lack of connectivity between the several voice components involved in turning up such a solution. That being said it is not very difficult to validate your deployment with a bit of Powershell.
+There are a few necessary results to gather where I believe it can be easy to &#8216;miss&#8217; configuration steps when turning up or disabling users:
 
         
-            <a href="/blog/2012/09/29/exchange-automatically-generating-configuration-scripts/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/">Exchange 2010: Poor Mans Monitoring 1.5</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-08-28</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        Just a quick upgrade to the script I posted earlier. This script is for monitoring and/or maintaining your Exchange 2010 mailboxes. It is meant to help an admin be proactive in their exchange environment. I updated the script to be a bit more customizable and fixed some obvious issues. The primary changes are removing the requirement for the MS chart controls as well as introducing an area of code just for custom scripts.
-
-        
-            <a href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/" class="more">Continue reading</a>
+            <a href="/blog/2014/11/13/lync-and-um-correlation-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
@@ -224,17 +165,25 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
+                    <a href="/tags/exchange">Exchange</a>
+                
                     <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/tags/microsoft">Microsoft</a>
+                    <a href="/tags/exchange-2013">Exchange 2013</a>
+                
+                    <a href="/tags/lync">Lync</a>
+                
+                    <a href="/tags/lync-2010">Lync 2010</a>
+                
+                    <a href="/tags/lync-2013">Lync 2013</a>
                 
                     <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
                 
                     <a href="/tags/sysadmin">Sysadmin</a>
                 
                     <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
@@ -250,7 +199,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2012/08/11/exchange-2010-automated-firewall-rule-generation-1-5/">
+                <a class="bubble" href="/blog/2014/10/09/ps-quickie-new-pin/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -258,11 +207,11 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2012/08/11/exchange-2010-automated-firewall-rule-generation-1-5/">Exchange 2010: Automated Firewall Rule Generation 1.5</a></h3>
+    <h3><a href="/blog/2014/10/09/ps-quickie-new-pin/">PS Quickie: New-PIN</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2012-08-11</span>
+                <span class="date moment">2014-10-10</span>
             
         
 
@@ -273,7 +222,84 @@
         
             <span class="categories">
                 
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
+                    <a href="/categories/lync">Lync</a>
+                
+                    <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/system-administration">System Administration</a>
+                
+            </span>
+        
+
+        
+            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
+        
+    </div>
+
+    
+        Setting a bunch of PINs for Lync devices is not difficult at all. Here is a script to pre-generate them should you find the need to do so. The function simply generates random digits between 0 and 9 and convert to a string. An exception is made for the first digit (as zeros are often not displayed in csv files when opened in excel) and only digits 1-9 are used.
+
+        
+            <a href="/blog/2014/10/09/ps-quickie-new-pin/" class="more">Continue reading</a>
+        
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/lync">Lync</a>
+                
+                    <a href="/tags/lync-2010">Lync 2010</a>
+                
+                    <a href="/tags/lync-2013">Lync 2013</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="/blog/2014/10/09/powershell-system-report-script-design/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/blog/2014/10/09/powershell-system-report-script-design/">Powershell: System Report Script Design</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2014-10-09</span>
+            
+        
+
+        
+            <span class="readingTime">7 min read</span>
+        
+
+        
+            <span class="categories">
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
@@ -294,79 +320,10 @@
     </div>
 
     
-        Just some aesthetic changes for upload to the Microsoft scripting repository. Biggest addition is the ability to run the script without parameters (just upgrade the included environment csv to your liking and run the script). Other big addition is the help section.
-GenerateExchangeFirewallRequirements_1-5
-or
-At the Microsoft Script Repository
+        <p>In this post I go back and explain some of my reasoning behind decisions I made in the design of an already released script, <a href="https://gallery.technet.microsoft.com/Excel-and-HTML-Asset-0ffbf569">Get-AssetReport</a>. This was written over a year ago and forgotten about as one of the many unpublished drafts on my blog. The code behind the script I discuss has been upgraded and used in several of my more popular scripts (<a href="https://gallery.technet.microsoft.com/Active-Directory-Audit-7754a877">AD Asset Report</a>, <a href="https://gallery.technet.microsoft.com/Big-IP-F5-LTM-Load-3fc9a2af">F5 LTM Report</a>, and <a href="https://gallery.technet.microsoft.com/Lync-2013-Mirrored-SQL-132c2f06">Lync 2013 Status Report</a>). Some of this content is slightly dated as I&#8217;ve since changed some of the coding but the core concepts are the same. Those digging through my crazy work or learning powershell may get some value from this content so I tidied it up a bit and here it is. Cheers!</p>
 
         
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/07/22/exchange-2010-poor-mans-monitoring/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/07/22/exchange-2010-poor-mans-monitoring/">Exchange 2010: Poor Man’s Monitoring</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-07-22</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/storage">Storage</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>I quietly released a new script into the wild the other day, Troubleshoot-MailboxServer.ps1. This script is meant for monitoring, fixing, and reporting on Exchange 2010 database servers. It pretty much just wraps around and reports on troubleshooting scripts found in %ExchangeInstallPath%Scripts. I also set it so you can have an email sent including warning/error color coded report upon completion.</p>
-
-        
-            <a href="/blog/2012/07/22/exchange-2010-poor-mans-monitoring/" class="more">Continue reading</a>
+            <a href="/blog/2014/10/09/powershell-system-report-script-design/" class="more">Continue reading</a>
         
     
 </div>
@@ -379,281 +336,12 @@ At the Microsoft Script Repository
         <div class="tags">
             <i class="fa fa-tags"></i>
             <div class="links">
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/monitoring">Monitoring</a>
                 
                     <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/system-administration">System Administration</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/07/10/exchange-2010-even-more-migration-tips/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/07/10/exchange-2010-even-more-migration-tips/">Exchange 2010: Even More Migration Tips</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-07-11</span>
-            
-        
-
-        
-            <span class="readingTime">16 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/iis">IIS</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>It has been a while since I passed on some personal experiences when performing Exchange 2010 migrations. I thought it was about time to update my list to include some more of the lesser known aspects of an Exchange 2010 migration.</p>
-
-        
-            <a href="/blog/2012/07/10/exchange-2010-even-more-migration-tips/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/2008-r2">2008 R2</a>
-                
-                    <a href="/tags/active-directory">Active Directory</a>
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
+                    <a href="/tags/psc">PSC</a>
                 
                     <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/06/23/lync-2010-ipdns-workbook/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/06/23/lync-2010-ipdns-workbook/">Lync 2010: IP/DNS Workbook</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-06-23</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/lync">Lync</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>I just ran across <a href="http://blogs.technet.com/b/nexthop/archive/2011/12/07/useful-tips-for-testing-your-lync-edge-server.aspx" title="Useful Tips For Testing Your Lync Edge Server">a Lync article</a> with all kinds of nice tables which distilled the myriad of DNS/IP addresses in a Lync deployment down to an easy to read format. I happen to have created one of these tables myself for a Lync deployment which included a standard Lync pool, XMPP gateway, Lync Mobility, and a single edge server. I figured others may find some use from it as it auto-populates the dns entries and what they are supposed to point to based on what you fill out for the highlighted cells. Sure you get some of this in the Lync Server 2010 Planning Tool but this offers a slightly different view of the environment as well as a nice one page overview.</p>
-
-        
-            <a href="/blog/2012/06/23/lync-2010-ipdns-workbook/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/lync">Lync</a>
-                
-                    <a href="/tags/lync-2010">Lync 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/05/28/active-directory-best-practices-workbook/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/05/28/active-directory-best-practices-workbook/">Active Directory: Best Practices Workbook</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-05-28</span>
-            
-        
-
-        
-            <span class="readingTime">3 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>This is a checklist for technicians performing Active Directory assessments. It is broken down by category and best practice. Some items listed are not really a best practice, but rather something which you may find in an environment which should be rectified (as part of an audit perhaps).</p>
-
-        
-            <a href="/blog/2012/05/28/active-directory-best-practices-workbook/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/active-directory">Active Directory</a>
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>

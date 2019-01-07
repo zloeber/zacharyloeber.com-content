@@ -7,7 +7,7 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> Linux | Zachary Loeber&#39;s Site</title>
+        <title> Linux | Zachary Loeber</title>
         <meta name="description" content="Linux - Zachary Loeber&#39;s Personal Site">
         <meta itemprop="name" content="Linux">
         <meta itemprop="description" content="Linux - Zachary Loeber&#39;s Personal Site">
@@ -15,13 +15,13 @@
         <meta property="og:description" content="Linux - Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/categories/linux/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/categories/linux/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/categories/linux/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/categories/linux/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/categories/linux/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2011/01/22/big-ip-custom-iis-soap-monitor/">
+                <a class="bubble" href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,32 +105,32 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2011/01/22/big-ip-custom-iis-soap-monitor/">Big-IP: Custom IIS SOAP Monitor</a></h3>
+    <h3><a href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/">Create Your Own Network Assessment Appliance: Additional Tools</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2011-01-22</span>
+                <span class="date moment">2012-11-29</span>
             
         
 
         
-            <span class="readingTime">3 min read</span>
+            <span class="readingTime">17 min read</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/categories/big-ip">BIG-IP</a>
-                
-                    <a href="/categories/iis">IIS</a>
+                    <a href="/categories/cisco">Cisco</a>
                 
                     <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/networking">Networking</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
+                
+                    <a href="/categories/ubuntu">Ubuntu</a>
+                
+                    <a href="/categories/virtualization">Virtualization</a>
                 
             </span>
         
@@ -141,18 +141,43 @@
     </div>
 
     
-        <p>In working on a production issue with my company&#8217;s flagship SaaS product I worked with some of the brilliant F5 engineers to isolate one web server in the load balanced pool which was intermittently failing. The F5 engineer recommended a health monitor that does more than just poll for a static page. He suggested we implement some kind of soap call to make the application pool do some work and return a result (I guess in case the IIS application pool is misbehaving but not down). So I worked with one of our developers to do just that but ran into some caveats which required yet another custom health monitor.</p>
+        <h1 id="introduction">Introduction</h1>
+
+<p>I <a href="/2012/04/08/create-your-own-network-assessment-appliance/" title="Create your own network assessment appliance">previously did a write up</a> on a personal virtual machine I like to keep at hand for performing network analysis and discovery. I&#8217;ve since added a few tools to the VM and documented how they were installed so I figured I&#8217;d share on how it was done. Even if you don&#8217;t setup everything in this post it may be worthwhile to glance through it for some network engineering tools which are free to setup and use but not highly publicized. Anyone who cares to read this post has likely heard of Solarwinds but I highly doubt you have heard of all the tools in this list (let alone how to set them up). Regardless, I&#8217;ll start with a tool anyone worth their salt has heard of though, Cacti&#8230;</p>
 
         
-            <a href="/blog/2011/01/22/big-ip-custom-iis-soap-monitor/" class="more">Continue reading</a>
+            <a href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/" class="more">Continue reading</a>
         
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/linux">Linux</a>
+                
+                    <a href="/tags/monitoring">Monitoring</a>
+                
+                    <a href="/tags/network-administration">network administration</a>
+                
+                    <a href="/tags/networking">Networking</a>
+                
+                    <a href="/tags/sysadmin">Sysadmin</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/ubuntu">Ubuntu</a>
+                
+                    <a href="/tags/vmware">vmware</a>
+                
+            </div>
+        </div>
     
 
     
@@ -165,7 +190,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2011/01/21/big-ip-sharepoint-2010-monitor/">
+                <a class="bubble" href="/blog/2012/04/08/create-your-own-network-assessment-appliance/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -173,16 +198,16 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2011/01/21/big-ip-sharepoint-2010-monitor/">Big-IP: Sharepoint 2010 Monitor</a></h3>
+    <h3><a href="/blog/2012/04/08/create-your-own-network-assessment-appliance/">Create Your Own Network Assessment Appliance</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2011-01-21</span>
+                <span class="date moment">2012-04-09</span>
             
         
 
         
-            <span class="readingTime">3 min read</span>
+            <span class="readingTime">12 min read</span>
         
 
         
@@ -190,7 +215,7 @@
                 
                     <a href="/categories/active-directory">Active Directory</a>
                 
-                    <a href="/categories/big-ip">BIG-IP</a>
+                    <a href="/categories/active-directory">Active Directory</a>
                 
                     <a href="/categories/linux">Linux</a>
                 
@@ -198,131 +223,7 @@
                 
                     <a href="/categories/networking">Networking</a>
                 
-                    <a href="/categories/sharepoint">Sharepoint</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>While specing out a Sharepoint 2007 to 2010 migration I discovered that the default monitor created by the application template on our big-ip LTM load balancers does not work. In seeking a solution I ran across this <a href="http://www.thef5guy.com/blog/2010/08/sharepoint-2010-ntlm-and-big-ip-health-monitors/#more-1070" target="_blank">gentleman&#8217;s blog with a custom external monitor</a> but found that it didn&#8217;t really work. The solution to make it work was simple (as I explained on his blog in a comment). I went ahead and extended it to be more environment generic.</p>
-
-        
-            <a href="/blog/2011/01/21/big-ip-sharepoint-2010-monitor/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2010/06/18/yum-list-only-security-updates/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2010/06/18/yum-list-only-security-updates/">Yum – List Only Security Updates</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2010-06-18</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/redhat/centos">RedHat/CentOS</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        I&#8217;ve been really MS inundated at work lately with exchange 2010, UAG 2010, and Communicator deployments/migrations. So to balance my life a bit I better do a quick post of a linux hack 🙂 Here is a quick one I tacked together about 6 months ago. This will generate a detailed report of all the security updates you are missing with a description of what the update will fix. You will need the yum-security package installed for this to work.
-
-        
-            <a href="/blog/2010/06/18/yum-list-only-security-updates/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2009/12/22/esx-4-0-post-install-script/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2009/12/22/esx-4-0-post-install-script/">ESX 4.0: Post-Install Script</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2009-12-23</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/networking">Networking</a>
+                    <a href="/categories/security">Security</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -339,16 +240,42 @@
     </div>
 
     
-        Sure there are better ways to mass deploy ESX servers, but this way will save the one off farm deployment person some time 🙂 I took liberties in assuming you would be able to fill in the blanks for variables so  or _VARIABLE_ will need to be replaced ad-lib style. Just for you my friend, served up proper on a hyper-link plate&#8230;.. esx4_postinstall
+        In this write-up I setup several network assessment tools which can be used in the discovery process of a new environment. This can be useful for a newly hired sysadmin or a consultant in rapidly gathering information to assess the health and/or state of a network.
+Introduction I often find myself assessing a foreign network infrastructure for performance or other issues. Depending on the size of the environment, digesting everything can be daunting without the help of some third party tools.
 
+        
+            <a href="/blog/2012/04/08/create-your-own-network-assessment-appliance/" class="more">Continue reading</a>
         
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/active-directory">Active Directory</a>
+                
+                    <a href="/tags/linux">Linux</a>
+                
+                    <a href="/tags/network-administration">network administration</a>
+                
+                    <a href="/tags/networking">Networking</a>
+                
+                    <a href="/tags/sysadmin">Sysadmin</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/virtualization">virtualization</a>
+                
+                    <a href="/tags/vmware">vmware</a>
+                
+            </div>
+        </div>
     
 
     
@@ -361,7 +288,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2009/12/07/big-ip-load-balancer-upgrade/">
+                <a class="bubble" href="/blog/2012/03/24/sysadmin-task-migrate-dns/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -369,26 +296,30 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2009/12/07/big-ip-load-balancer-upgrade/">BIG-IP: Load Balancer Upgrade</a></h3>
+    <h3><a href="/blog/2012/03/24/sysadmin-task-migrate-dns/">Sysadmin Task: Migrate DNS</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2009-12-07</span>
+                <span class="date moment">2012-03-24</span>
             
         
 
         
-            <span class="readingTime">2 min read</span>
+            <span class="readingTime">8 min read</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/categories/big-ip">BIG-IP</a>
+                    <a href="/categories/active-directory">Active Directory</a>
                 
                     <a href="/categories/linux">Linux</a>
                 
+                    <a href="/categories/microsoft">Microsoft</a>
+                
                     <a href="/categories/networking">Networking</a>
+                
+                    <a href="/categories/powershell">Powershell</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -401,138 +332,10 @@
     </div>
 
     
-        <p>I had the pleasure of doing an F5 BIG-IP load balancer upgrade recently and am happy with the way the F5 people have designed their systems for fail over. Essentially you will use different system partitions to host different versions of their product and you change which one you want to boot to after updating the inactive partition. This, theoretically, means you can always go back to a working configuration if something goes awry. I&#8217;m unhappy with how fragmented their documentation is in getting from point A to point B though. Here is a quick rundown of what I had to do&#8230;</p>
+        <p>I&#8217;ve migrated DNS servers more than a few times and find that I&#8217;m doing the same tasks or using the same custom scripts over and over again. Here is my quick and dirty task list with some powershell scripts you too might find of use. As there are a hundred ways to skin this cat I don&#8217;t claim my methods to be the best but they sure are fast and far easier than manually changing a dns address on hundreds of servers, workstations, and network devices.</p>
 
         
-            <a href="/blog/2009/12/07/big-ip-load-balancer-upgrade/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2009/11/21/centosredhat-5-x-post-install-script/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2009/11/21/centosredhat-5-x-post-install-script/">CentOS/Redhat 5.x Post-Install Script</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2009-11-21</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/redhat/centos">RedHat/CentOS</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        I whipped up a post install script to run on our new linux servers that drastically reduced the amount of manual effort involved with post-deployment configuration. I&#8217;m sure this could some how be integrated into the kick deployment. In any case, this script helps setup your sudo users, snmp services, and some other basic things. Modify to your environment and run directly after deployment on your headless linux servers. Save the script and change to .
-
-        
-            <a href="/blog/2009/11/21/centosredhat-5-x-post-install-script/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2009/11/19/centosredhat-5-x-kickstart-deployment/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2009/11/19/centosredhat-5-x-kickstart-deployment/">CentOS/Redhat 5.x Kickstart Deployment</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2009-11-19</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/virtualization">Virtualization</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>Not too long ago I was tasked with deploying a decent number of CentOS 5.3 and Redhat servers to BL490 blades and VMs in our datacenter (part of a massive environment deployment with HP C7000 enclosures, virtual connect, and a lot of patience). I hate manual configuration so I figured now is as good of time as any to get on the kickstart bandwagon. Here is how I did it:</p>
-
-        
-            <a href="/blog/2009/11/19/centosredhat-5-x-kickstart-deployment/" class="more">Continue reading</a>
+            <a href="/blog/2012/03/24/sysadmin-task-migrate-dns/" class="more">Continue reading</a>
         
     
 </div>

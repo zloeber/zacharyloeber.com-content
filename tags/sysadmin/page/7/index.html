@@ -7,7 +7,7 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> Sysadmin | Zachary Loeber&#39;s Site</title>
+        <title> Sysadmin | Zachary Loeber</title>
         <meta name="description" content="Sysadmin - Zachary Loeber&#39;s Personal Site">
         <meta itemprop="name" content="Sysadmin">
         <meta itemprop="description" content="Sysadmin - Zachary Loeber&#39;s Personal Site">
@@ -15,13 +15,13 @@
         <meta property="og:description" content="Sysadmin - Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/tags/sysadmin/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2012/06/23/lync-2010-ipdns-workbook/">
+                <a class="bubble" href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,11 +105,11 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2012/06/23/lync-2010-ipdns-workbook/">Lync 2010: IP/DNS Workbook</a></h3>
+    <h3><a href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/">Gather (and Diagram) Installed Roles and Features With Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2012-06-23</span>
+                <span class="date moment">2013-12-18</span>
             
         
 
@@ -120,11 +120,9 @@
         
             <span class="categories">
                 
-                    <a href="/categories/lync">Lync</a>
-                
                     <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="/categories/networking">Networking</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -137,10 +135,10 @@
     </div>
 
     
-        <p>I just ran across <a href="http://blogs.technet.com/b/nexthop/archive/2011/12/07/useful-tips-for-testing-your-lync-edge-server.aspx" title="Useful Tips For Testing Your Lync Edge Server">a Lync article</a> with all kinds of nice tables which distilled the myriad of DNS/IP addresses in a Lync deployment down to an easy to read format. I happen to have created one of these tables myself for a Lync deployment which included a standard Lync pool, XMPP gateway, Lync Mobility, and a single edge server. I figured others may find some use from it as it auto-populates the dns entries and what they are supposed to point to based on what you fill out for the highlighted cells. Sure you get some of this in the Lync Server 2010 Planning Tool but this offers a slightly different view of the environment as well as a nice one page overview.</p>
+        <p>Use this powershell script to gather installed features and roles from remote systems. This uses two wmi classes in an attempt to gather as much information as possible. Win32_ServerFeature will contain roles and their dependencies on systems running Windows 2008 and above. For these systems we can use this hierarchy to also produce pretty diagrams using graphviz and techniques I&#8217;ve exhibited in some of my other scripts (I added this last part in cause it is easy to do, not really certain how useful it is other than maybe exploring the dependencies between windows roles/features).</p>
 
         
-            <a href="/blog/2012/06/23/lync-2010-ipdns-workbook/" class="more">Continue reading</a>
+            <a href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
@@ -154,17 +152,21 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/lync">Lync</a>
-                
-                    <a href="/tags/lync-2010">Lync 2010</a>
-                
                     <a href="/tags/microsoft">Microsoft</a>
                 
-                    <a href="/tags/networking">Networking</a>
+                    <a href="/tags/network-administration">network administration</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
+                
+                    <a href="/tags/scripting">Scripting</a>
                 
                     <a href="/tags/sysadmin">Sysadmin</a>
                 
                     <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
@@ -180,7 +182,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2012/04/08/create-your-own-network-assessment-appliance/">
+                <a class="bubble" href="/blog/2013/10/16/gather-remote-event-logs-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -188,38 +190,26 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2012/04/08/create-your-own-network-assessment-appliance/">Create Your Own Network Assessment Appliance</a></h3>
+    <h3><a href="/blog/2013/10/16/gather-remote-event-logs-with-powershell/">Gather Remote Event Logs With Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2012-04-09</span>
+                <span class="date moment">2013-10-16</span>
             
         
 
         
-            <span class="readingTime">12 min read</span>
+            <span class="readingTime">1 min read</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
                     <a href="/categories/security">Security</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/virtualization">Virtualization</a>
-                
-                    <a href="/categories/vmware">VMware</a>
                 
             </span>
         
@@ -230,11 +220,12 @@
     </div>
 
     
-        In this write-up I setup several network assessment tools which can be used in the discovery process of a new environment. This can be useful for a newly hired sysadmin or a consultant in rapidly gathering information to assess the health and/or state of a network.
-Introduction I often find myself assessing a foreign network infrastructure for performance or other issues. Depending on the size of the environment, digesting everything can be daunting without the help of some third party tools.
+        About Gather the remote event log information for one or more systems using wmi, alternate credentials, and multiple runspaces. Function supports custom timeout parameters in case of wmi problems and returns Event Log information for the specified number of past hours. You can view verbose information on each runspace thread in realtime with the -Verbose option.
+Version History 1.0.0 &#8211; 10/16/2013
+ Initial release  Notes By default 24 hours is what we filter against for the results.
 
         
-            <a href="/blog/2012/04/08/create-your-own-network-assessment-appliance/" class="more">Continue reading</a>
+            <a href="/blog/2013/10/16/gather-remote-event-logs-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
@@ -248,21 +239,21 @@ Introduction I often find myself assessing a foreign network infrastructure for 
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/active-directory">Active Directory</a>
-                
-                    <a href="/tags/linux">Linux</a>
+                    <a href="/tags/microsoft">Microsoft</a>
                 
                     <a href="/tags/network-administration">network administration</a>
                 
                     <a href="/tags/networking">Networking</a>
                 
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/scripting">Scripting</a>
+                
                     <a href="/tags/sysadmin">Sysadmin</a>
                 
                     <a href="/tags/system-administration">System Administration</a>
                 
-                    <a href="/tags/virtualization">virtualization</a>
-                
-                    <a href="/tags/vmware">vmware</a>
+                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
@@ -278,7 +269,7 @@ Introduction I often find myself assessing a foreign network infrastructure for 
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2011/03/17/windows-2003-to-2008-r2-radius-migration/">
+                <a class="bubble" href="/blog/2013/10/06/retrieve-remote-scheduled-task-information-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -286,28 +277,26 @@ Introduction I often find myself assessing a foreign network infrastructure for 
     
 
     <div class="content">
-    <h3><a href="/blog/2011/03/17/windows-2003-to-2008-r2-radius-migration/">Windows: 2003 to 2008 R2 RADIUS Migration</a></h3>
+    <h3><a href="/blog/2013/10/06/retrieve-remote-scheduled-task-information-with-powershell/">Retrieve Remote Scheduled Task Information With Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2011-03-17</span>
+                <span class="date moment">2013-10-06</span>
             
         
 
         
-            <span class="readingTime">1 min read</span>
+            <span class="readingTime">2 min read</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/categories/active-directory">Active Directory</a>
-                
                     <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="/categories/networking">Networking</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
-                    <a href="/categories/security">Security</a>
+                    <a href="/categories/system-administration">System Administration</a>
                 
             </span>
         
@@ -318,10 +307,10 @@ Introduction I often find myself assessing a foreign network infrastructure for 
     </div>
 
     
-        <p>I found myself doing yet another Windows 2003 IAS Radius server migration to 2008 R2 NPS. I found that I had my prior notes and was able to do this quickly but, hell, if I&#8217;m looking this up in my own notes I may as well just post this succinct little procedure.</p>
+        <p>This function uses multiple runspaces with along with COM objects to gather information about the scheduled tasks of remote systems. Getting this to work with alternate credentials may be possible but I wasn’t able to discern a usable method to make it happen so I resorted to PSremoting. What this means is that this script will work against multiple remote systems which do not have psremoting enabled as long as you are running the script with an account that has administrative rights to them. If you do pass a credential to the function then psremoting will be used instead. You can also force psremoting to be used if you are using that across the board in your environment.</p>
 
         
-            <a href="/blog/2011/03/17/windows-2003-to-2008-r2-radius-migration/" class="more">Continue reading</a>
+            <a href="/blog/2013/10/06/retrieve-remote-scheduled-task-information-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
@@ -337,17 +326,11 @@ Introduction I often find myself assessing a foreign network infrastructure for 
                 
                     <a href="/tags/2008-r2">2008 R2</a>
                 
-                    <a href="/tags/active-directory">Active Directory</a>
-                
                     <a href="/tags/microsoft">Microsoft</a>
                 
-                    <a href="/tags/networking">Networking</a>
+                    <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/nps">NPS</a>
-                
-                    <a href="/tags/radius">Radius</a>
-                
-                    <a href="/tags/security">Security</a>
+                    <a href="/tags/scripting">Scripting</a>
                 
                     <a href="/tags/sysadmin">Sysadmin</a>
                 
@@ -370,6 +353,8 @@ Introduction I often find myself assessing a foreign network infrastructure for 
 
     
     <div class="paginator">
+        
+            <a href="/tags/sysadmin/page/8/" class="older"><i class="fa fa-angle-double-left"></i> Older posts</a>
         
 
         

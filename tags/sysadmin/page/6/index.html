@@ -7,7 +7,7 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> Sysadmin | Zachary Loeber&#39;s Site</title>
+        <title> Sysadmin | Zachary Loeber</title>
         <meta name="description" content="Sysadmin - Zachary Loeber&#39;s Personal Site">
         <meta itemprop="name" content="Sysadmin">
         <meta itemprop="description" content="Sysadmin - Zachary Loeber&#39;s Personal Site">
@@ -15,13 +15,13 @@
         <meta property="og:description" content="Sysadmin - Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/tags/sysadmin/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/tags/sysadmin/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2013/06/17/use-powershell-to-create-a-windows-service-dependency-diagrams/">
+                <a class="bubble" href="/blog/2014/09/26/exchange-handling-old-log-and-other-files/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,11 +105,101 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2013/06/17/use-powershell-to-create-a-windows-service-dependency-diagrams/">Use Powershell to Create a Windows Service Dependency Diagrams</a></h3>
+    <h3><a href="/blog/2014/09/26/exchange-handling-old-log-and-other-files/">Exchange: Handling Old Log and Other Files</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2013-06-17</span>
+                <span class="date moment">2014-09-26</span>
+            
+        
+
+        
+            <span class="readingTime">7 min read</span>
+        
+
+        
+            <span class="categories">
+                
+                    <a href="/categories/exchange">Exchange</a>
+                
+                    <a href="/categories/exchange-2010">Exchange 2010</a>
+                
+                    <a href="/categories/exchange-2013">Exchange 2013</a>
+                
+                    <a href="/categories/iis">IIS</a>
+                
+                    <a href="/categories/microsoft">Microsoft</a>
+                
+                    <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/system-administration">System Administration</a>
+                
+            </span>
+        
+
+        
+            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
+        
+    </div>
+
+    
+        In Exchange old logs can really build up fast. Not database transaction logs but rather temporary transport, client access, IIS, and other debug related crap that typically default to locations either on your system drive or Exchange install path. Of course, Powershell scripting can provide a decent solution for this problem.
+Introduction More than any other version, Exchange 2013 seems to like logging information to disk. By default, much of what gets logged will not auto-rotate (or if it does, it happens infrequently) either so you end up with this slow ticking time-bomb in your environment.
+
+        
+            <a href="/blog/2014/09/26/exchange-handling-old-log-and-other-files/" class="more">Continue reading</a>
+        
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/exchange-2010">Exchange 2010</a>
+                
+                    <a href="/tags/exchange-2013">Exchange 2013</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
+                
+                    <a href="/tags/sysadmin">Sysadmin</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+        <div class="article-wrapper u-cf">
+            
+                <a class="bubble" href="/blog/2014/02/02/powershell-gui-script-wrapper-utility/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/blog/2014/02/02/powershell-gui-script-wrapper-utility/">Powershell GUI Script Wrapper Utility</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2014-02-03</span>
             
         
 
@@ -124,8 +214,6 @@
                 
                     <a href="/categories/powershell">Powershell</a>
                 
-                    <a href="/categories/security">Security</a>
-                
                     <a href="/categories/system-administration">System Administration</a>
                 
             </span>
@@ -137,10 +225,10 @@
     </div>
 
     
-        <p>I use powershell with graphviz to generate color coded service dependency diagrams for windows services. Besides creating useful and beautiful diagrams for your environment, this will also provide some interesting functions for gathering remote service information with alternate credentials.</p>
+        <p>Creating GUIs for your scripts can be a tedious process. That is why I don’t do so for each powershell project I release. Instead of wasting my precious little free time putting together yet another GUI for a one off script I decided to create a tool which will create the GUI scripts for me automatically!</p>
 
         
-            <a href="/blog/2013/06/17/use-powershell-to-create-a-windows-service-dependency-diagrams/" class="more">Continue reading</a>
+            <a href="/blog/2014/02/02/powershell-gui-script-wrapper-utility/" class="more">Continue reading</a>
         
     
 </div>
@@ -154,11 +242,9 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
                     <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
                 
                     <a href="/tags/scripting">Scripting</a>
                 
@@ -180,7 +266,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2013/06/02/powershell-utility-comment-based-help-automater/">
+                <a class="bubble" href="/blog/2014/01/07/exchange-20102013-database-leveling-script/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -188,91 +274,16 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2013/06/02/powershell-utility-comment-based-help-automater/">Powershell Utility: Comment Based Help Automater</a></h3>
+    <h3><a href="/blog/2014/01/07/exchange-20102013-database-leveling-script/">Exchange 2010/2013: Database Leveling Script</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2013-06-02</span>
+                <span class="date moment">2014-01-07</span>
             
         
 
         
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>Comment based help is used in powershell-land to provide fast and easy help for cmdlets at the console. This little powershell based GUI helps fellow coders automatically construct comment based help blocks for their functions.</p>
-
-        
-            <a href="/blog/2013/06/02/powershell-utility-comment-based-help-automater/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/05/09/exchange-2010-mailbox-audit-report-script/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/05/09/exchange-2010-mailbox-audit-report-script/">Exchange 2010 Mailbox Audit Report Script</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-05-10</span>
-            
-        
-
-        
-            <span class="readingTime">5 min read</span>
+            <span class="readingTime">9 min read</span>
         
 
         
@@ -286,8 +297,6 @@
                 
                     <a href="/categories/powershell">Powershell</a>
                 
-                    <a href="/categories/security">Security</a>
-                
                     <a href="/categories/system-administration">System Administration</a>
                 
             </span>
@@ -299,184 +308,10 @@
     </div>
 
     
-        <h1 id="exchange-2010-mailbox-audit-report-script">Exchange 2010 Mailbox Audit Report Script</h1>
-
-<p>Recently I’ve released a number of scripts such as the <a href="http://gallery.technet.microsoft.com/Colorize-HTML-Table-Cells-2ea63acd">HTML Table Colorizer</a>, <a href="http://gallery.technet.microsoft.com/Get-Exchange-Calendar-5bb4f527">Exchange Mailbox Calendar Permission Function</a>, and the <a href="http://gallery.technet.microsoft.com/Exchange-Mailbox-GUI-5b204590">Exchange Mailbox GUI</a>. These were all actually created specifically as support scripts for a report generation powershell tool I’ve been working on, the Exchange Mailbox Auditing Tool.</p>
+        <p>It is common to randomly choose mailbox databases when creating or migrating user mailboxes in Exchange. I actually recommend this practice unless you are setting up a tiered user/storage environment. Unfortunately this may result in an unequal distribution of data which, in turn, can result in an environment where mailbox databases are wildly different in size. In this post I will discuss an approach to leveling the databases so they are equal in size by moving mailboxes between them.</p>
 
         
-            <a href="/blog/2013/05/09/exchange-2010-mailbox-audit-report-script/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/active-directory">Active Directory</a>
-                
-                    <a href="/tags/exchange">Exchange</a>
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/security">Security</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/04/28/powershell-colorize-table-ps1-updated/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/04/28/powershell-colorize-table-ps1-updated/">Powershell: Colorize-Table.ps1 Updated</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-04-28</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>A little while ago I released a script which uses custom linq assemblies to quickly modify an html table based on column header and an arbitrary scriptblock to test the values within that entire column (by default it is a simple -eq comparison). If the scriptblock evaluates to be true then you can either change just the cell style or the entire row style.</p>
-
-        
-            <a href="/blog/2013/04/28/powershell-colorize-table-ps1-updated/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/scripting">Scripting</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2013/01/15/exchange-co-existence-client-access-preparation-report/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2013/01/15/exchange-co-existence-client-access-preparation-report/">Exchange: Co-existence Client Access Preparation Report</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2013-01-16</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>If you upgrade Exchange in a co-existence scenario (you want to keep the same client access namespace) there is one crucial moment of truth which must be overcome. This is the phase of the migration I&#8217;ve come to call the &#8220;dns flip-over&#8221; or the &#8220;client access part&#8221;. Without preparation this part of the migration can be a real headache as issues are directly experienced by your end users.  This is a simple report card you can use to prepare you for this moment.</p>
-
-        
-            <a href="/blog/2013/01/15/exchange-co-existence-client-access-preparation-report/" class="more">Continue reading</a>
+            <a href="/blog/2014/01/07/exchange-20102013-database-leveling-script/" class="more">Continue reading</a>
         
     
 </div>
@@ -492,187 +327,15 @@
                 
                     <a href="/tags/exchange-2010">Exchange 2010</a>
                 
+                    <a href="/tags/exchange-2013">Exchange 2013</a>
+                
                     <a href="/tags/microsoft">Microsoft</a>
                 
                     <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/">Create Your Own Network Assessment Appliance: Additional Tools</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-11-29</span>
-            
-        
-
-        
-            <span class="readingTime">17 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/cisco">Cisco</a>
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/ubuntu">Ubuntu</a>
-                
-                    <a href="/categories/virtualization">Virtualization</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <h1 id="introduction">Introduction</h1>
-
-<p>I <a href="/2012/04/08/create-your-own-network-assessment-appliance/" title="Create your own network assessment appliance">previously did a write up</a> on a personal virtual machine I like to keep at hand for performing network analysis and discovery. I&#8217;ve since added a few tools to the VM and documented how they were installed so I figured I&#8217;d share on how it was done. Even if you don&#8217;t setup everything in this post it may be worthwhile to glance through it for some network engineering tools which are free to setup and use but not highly publicized. Anyone who cares to read this post has likely heard of Solarwinds but I highly doubt you have heard of all the tools in this list (let alone how to set them up). Regardless, I&#8217;ll start with a tool anyone worth their salt has heard of though, Cacti&#8230;</p>
-
-        
-            <a href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/linux">Linux</a>
-                
-                    <a href="/tags/monitoring">Monitoring</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/ubuntu">Ubuntu</a>
-                
-                    <a href="/tags/vmware">vmware</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/">Exchange 2010: Poor Mans Monitoring 1.5</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-08-28</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        Just a quick upgrade to the script I posted earlier. This script is for monitoring and/or maintaining your Exchange 2010 mailboxes. It is meant to help an admin be proactive in their exchange environment. I updated the script to be a bit more customizable and fixed some obvious issues. The primary changes are removing the requirement for the MS chart controls as well as introducing an area of code just for custom scripts.
-
-        
-            <a href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
                 
                     <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/scripting">Scripting</a>
+                    <a href="/tags/psc">PSC</a>
                 
                     <a href="/tags/sysadmin">Sysadmin</a>
                 

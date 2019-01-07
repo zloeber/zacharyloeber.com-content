@@ -7,7 +7,7 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> System Administration | Zachary Loeber&#39;s Site</title>
+        <title> System Administration | Zachary Loeber</title>
         <meta name="description" content="System Administration - Zachary Loeber&#39;s Personal Site">
         <meta itemprop="name" content="System Administration">
         <meta itemprop="description" content="System Administration - Zachary Loeber&#39;s Personal Site">
@@ -15,13 +15,13 @@
         <meta property="og:description" content="System Administration - Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/tags/system-administration/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/tags/system-administration/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/tags/system-administration/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/tags/system-administration/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/tags/system-administration/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2013/01/15/exchange-co-existence-client-access-preparation-report/">
+                <a class="bubble" href="/blog/2014/10/09/powershell-system-report-script-design/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,29 +105,29 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2013/01/15/exchange-co-existence-client-access-preparation-report/">Exchange: Co-existence Client Access Preparation Report</a></h3>
+    <h3><a href="/blog/2014/10/09/powershell-system-report-script-design/">Powershell: System Report Script Design</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2013-01-16</span>
+                <span class="date moment">2014-10-09</span>
             
         
 
         
-            <span class="readingTime">2 min read</span>
+            <span class="readingTime">7 min read</span>
         
 
         
             <span class="categories">
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/networking">Networking</a>
                 
+                    <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/security">Security</a>
+                
                     <a href="/categories/system-administration">System Administration</a>
                 
             </span>
@@ -139,10 +139,10 @@
     </div>
 
     
-        <p>If you upgrade Exchange in a co-existence scenario (you want to keep the same client access namespace) there is one crucial moment of truth which must be overcome. This is the phase of the migration I&#8217;ve come to call the &#8220;dns flip-over&#8221; or the &#8220;client access part&#8221;. Without preparation this part of the migration can be a real headache as issues are directly experienced by your end users.  This is a simple report card you can use to prepare you for this moment.</p>
+        <p>In this post I go back and explain some of my reasoning behind decisions I made in the design of an already released script, <a href="https://gallery.technet.microsoft.com/Excel-and-HTML-Asset-0ffbf569">Get-AssetReport</a>. This was written over a year ago and forgotten about as one of the many unpublished drafts on my blog. The code behind the script I discuss has been upgraded and used in several of my more popular scripts (<a href="https://gallery.technet.microsoft.com/Active-Directory-Audit-7754a877">AD Asset Report</a>, <a href="https://gallery.technet.microsoft.com/Big-IP-F5-LTM-Load-3fc9a2af">F5 LTM Report</a>, and <a href="https://gallery.technet.microsoft.com/Lync-2013-Mirrored-SQL-132c2f06">Lync 2013 Status Report</a>). Some of this content is slightly dated as I&#8217;ve since changed some of the coding but the core concepts are the same. Those digging through my crazy work or learning powershell may get some value from this content so I tidied it up a bit and here it is. Cheers!</p>
 
         
-            <a href="/blog/2013/01/15/exchange-co-existence-client-access-preparation-report/" class="more">Continue reading</a>
+            <a href="/blog/2014/10/09/powershell-system-report-script-design/" class="more">Continue reading</a>
         
     
 </div>
@@ -156,15 +156,9 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
+                    <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
+                    <a href="/tags/psc">PSC</a>
                 
                     <a href="/tags/system-administration">System Administration</a>
                 
@@ -182,7 +176,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2012/12/11/defining-best-of-breed-in-it/">
+                <a class="bubble" href="/blog/2014/09/26/exchange-handling-old-log-and-other-files/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -190,296 +184,29 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2012/12/11/defining-best-of-breed-in-it/">Defining Best of Breed in IT</a></h3>
+    <h3><a href="/blog/2014/09/26/exchange-handling-old-log-and-other-files/">Exchange: Handling Old Log and Other Files</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2012-12-11</span>
+                <span class="date moment">2014-09-26</span>
             
         
 
         
-            <span class="readingTime">8 min read</span>
+            <span class="readingTime">7 min read</span>
         
 
         
             <span class="categories">
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/other">Other</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <h1 id="introduction">Introduction</h1>
-
-<p>Soon I’ll be starting a new position with a company which produces some of the highest quality products in their industry. The company’s products are of such high quality that they typically set the bar in their industry. This made me think of what a truly comprises an excellent solution within the Information Technology.  This article is a non-technical personal view of what defines the “Best of breed” technical solutions.</p>
-
-        
-            <a href="/blog/2012/12/11/defining-best-of-breed-in-it/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/other">Other</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/">Create Your Own Network Assessment Appliance: Additional Tools</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-11-29</span>
-            
-        
-
-        
-            <span class="readingTime">17 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/cisco">Cisco</a>
-                
-                    <a href="/categories/linux">Linux</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/ubuntu">Ubuntu</a>
-                
-                    <a href="/categories/virtualization">Virtualization</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <h1 id="introduction">Introduction</h1>
-
-<p>I <a href="/2012/04/08/create-your-own-network-assessment-appliance/" title="Create your own network assessment appliance">previously did a write up</a> on a personal virtual machine I like to keep at hand for performing network analysis and discovery. I&#8217;ve since added a few tools to the VM and documented how they were installed so I figured I&#8217;d share on how it was done. Even if you don&#8217;t setup everything in this post it may be worthwhile to glance through it for some network engineering tools which are free to setup and use but not highly publicized. Anyone who cares to read this post has likely heard of Solarwinds but I highly doubt you have heard of all the tools in this list (let alone how to set them up). Regardless, I&#8217;ll start with a tool anyone worth their salt has heard of though, Cacti&#8230;</p>
-
-        
-            <a href="/blog/2012/11/28/create-your-own-network-assessment-appliance-additional-tools/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/linux">Linux</a>
-                
-                    <a href="/tags/monitoring">Monitoring</a>
-                
-                    <a href="/tags/network-administration">network administration</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/sysadmin">Sysadmin</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/ubuntu">Ubuntu</a>
-                
-                    <a href="/tags/vmware">vmware</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/11/22/exchange-the-state-of-external-client-access/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/11/22/exchange-the-state-of-external-client-access/">Exchange – The State Of External Client Access</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-11-22</span>
-            
-        
-
-        
-            <span class="readingTime">12 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/active-directory">Active Directory</a>
-                
-                    <a href="/categories/active-directory">Active Directory</a>
                 
                     <a href="/categories/exchange">Exchange</a>
                 
                     <a href="/categories/exchange-2010">Exchange 2010</a>
+                
+                    <a href="/categories/exchange-2013">Exchange 2013</a>
                 
                     <a href="/categories/iis">IIS</a>
                 
-                    <a href="/categories/lync">Lync</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/unified-access-gateway">Unified Access Gateway</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <h1 id="introduction">Introduction</h1>
-
-<p>Most within the messaging and collaboration industry are hyped up about the next wave of Microsoft collaboration and messaging products which are soon to be released. Among these products is Exchange 2013 RTM. This type of release typically precedes yet another wave of architecture upgrades across the corporate landscape. Some of these (beta testers) will be will undoubtedly upgrade to Exchange 2013.</p>
-
-<p>Other corporations will start to feel the burn to upgrade as well. These will be organizations which realize that their Exchange <sup>2003</sup>&frasl;<sub>2007</sub> infrastructure is nearing a decade old existence and cannot meet the demands of their ever growing mobile workforce. Realizing they are behind the curve, they may feel hastened to upgrade as well, possibly just to Exchange 2010. Regardless the reason in choosing to upgrade their messaging infrastructure, there are critical design decisions which need to be made in how clients access this infrastructure both internally and externally. This article focuses solely on the external access aspect of the infrastructure.</p>
-
-        
-            <a href="/blog/2012/11/22/exchange-the-state-of-external-client-access/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/linux">Linux</a>
-                
-                    <a href="/tags/lync">Lync</a>
-                
-                    <a href="/tags/lync-2010">Lync 2010</a>
-                
-                    <a href="/tags/networking">Networking</a>
-                
-                    <a href="/tags/security">Security</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-                    <a href="/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/">Exchange 2010: Poor Mans Monitoring 1.5</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-08-28</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
                     <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/powershell">Powershell</a>
@@ -495,10 +222,11 @@
     </div>
 
     
-        Just a quick upgrade to the script I posted earlier. This script is for monitoring and/or maintaining your Exchange 2010 mailboxes. It is meant to help an admin be proactive in their exchange environment. I updated the script to be a bit more customizable and fixed some obvious issues. The primary changes are removing the requirement for the MS chart controls as well as introducing an area of code just for custom scripts.
+        In Exchange old logs can really build up fast. Not database transaction logs but rather temporary transport, client access, IIS, and other debug related crap that typically default to locations either on your system drive or Exchange install path. Of course, Powershell scripting can provide a decent solution for this problem.
+Introduction More than any other version, Exchange 2013 seems to like logging information to disk. By default, much of what gets logged will not auto-rotate (or if it does, it happens infrequently) either so you end up with this slow ticking time-bomb in your environment.
 
         
-            <a href="/blog/2012/08/27/exchange-2010-poor-mans-monitoring-1-5/" class="more">Continue reading</a>
+            <a href="/blog/2014/09/26/exchange-handling-old-log-and-other-files/" class="more">Continue reading</a>
         
     
 </div>
@@ -514,11 +242,11 @@
                 
                     <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/tags/microsoft">Microsoft</a>
+                    <a href="/tags/exchange-2013">Exchange 2013</a>
                 
                     <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/scripting">Scripting</a>
+                    <a href="/tags/psc">PSC</a>
                 
                     <a href="/tags/sysadmin">Sysadmin</a>
                 
@@ -538,7 +266,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2012/07/22/exchange-2010-poor-mans-monitoring/">
+                <a class="bubble" href="/blog/2014/08/23/exchange-receive-connector-tango-part-2/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -546,96 +274,11 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2012/07/22/exchange-2010-poor-mans-monitoring/">Exchange 2010: Poor Man’s Monitoring</a></h3>
+    <h3><a href="/blog/2014/08/23/exchange-receive-connector-tango-part-2/">Exchange: Receive Connector Tango! – Part 2</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2012-07-22</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/powershell">Powershell</a>
-                
-                    <a href="/categories/storage">Storage</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>I quietly released a new script into the wild the other day, Troubleshoot-MailboxServer.ps1. This script is meant for monitoring, fixing, and reporting on Exchange 2010 database servers. It pretty much just wraps around and reports on troubleshooting scripts found in %ExchangeInstallPath%Scripts. I also set it so you can have an email sent including warning/error color coded report upon completion.</p>
-
-        
-            <a href="/blog/2012/07/22/exchange-2010-poor-mans-monitoring/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
-                
-                    <a href="/tags/microsoft">Microsoft</a>
-                
-                    <a href="/tags/monitoring">Monitoring</a>
-                
-                    <a href="/tags/powershell">Powershell</a>
-                
-                    <a href="/tags/system-administration">System Administration</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2012/07/10/exchange-2010-even-more-migration-tips/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2012/07/10/exchange-2010-even-more-migration-tips/">Exchange 2010: Even More Migration Tips</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2012-07-11</span>
+                <span class="date moment">2014-08-23</span>
             
         
 
@@ -648,17 +291,17 @@
                 
                     <a href="/categories/active-directory">Active Directory</a>
                 
-                    <a href="/categories/active-directory">Active Directory</a>
-                
                     <a href="/categories/exchange">Exchange</a>
                 
                     <a href="/categories/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/categories/iis">IIS</a>
+                    <a href="/categories/exchange-2013">Exchange 2013</a>
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
                     <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/security">Security</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -671,10 +314,10 @@
     </div>
 
     
-        <p>It has been a while since I passed on some personal experiences when performing Exchange 2010 migrations. I thought it was about time to update my list to include some more of the lesser known aspects of an Exchange 2010 migration.</p>
+        <p><a href="/2014/07/06/exchange-receive-connector-tango-part-1/">In part 1 of this series</a> I discussed some basic knowledge requirements to get a better grip on receive connectors in Exchange. I continue that conversation with some examples of improperly configured connectors and the issues they may cause. I finish up the discussion with a script you can use to scan your environment for such configurations.</p>
 
         
-            <a href="/blog/2012/07/10/exchange-2010-even-more-migration-tips/" class="more">Continue reading</a>
+            <a href="/blog/2014/08/23/exchange-receive-connector-tango-part-2/" class="more">Continue reading</a>
         
     
 </div>
@@ -688,19 +331,17 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/2008-r2">2008 R2</a>
-                
-                    <a href="/tags/active-directory">Active Directory</a>
+                    <a href="/tags/exchange">Exchange</a>
                 
                     <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/tags/microsoft">Microsoft</a>
+                    <a href="/tags/exchange-2013">Exchange 2013</a>
                 
                     <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/system-administration">System Administration</a>
+                    <a href="/tags/psc">PSC</a>
                 
-                    <a href="/tags/windows">Windows</a>
+                    <a href="/tags/system-administration">System Administration</a>
                 
             </div>
         </div>

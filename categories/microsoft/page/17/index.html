@@ -7,7 +7,7 @@
         <meta name="description" content="Zachary Loeber&#39;s Personal Site">
         <meta name="keywords" content="blog,personal,devops,infrastructure,code">
         <meta name="generator" content="Hugo 0.53" />
-        <title> Microsoft | Zachary Loeber&#39;s Site</title>
+        <title> Microsoft | Zachary Loeber</title>
         <meta name="description" content="Microsoft - Zachary Loeber&#39;s Personal Site">
         <meta itemprop="name" content="Microsoft">
         <meta itemprop="description" content="Microsoft - Zachary Loeber&#39;s Personal Site">
@@ -15,13 +15,13 @@
         <meta property="og:description" content="Microsoft - Zachary Loeber&#39;s Personal Site">
         <meta property="og:image" content="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?size=200">
         <meta property="og:url" content="https://zacharyloeber.com/categories/microsoft/">
-        <meta property="og:site_name" content="Zachary Loeber&#39;s Site"><meta property="og:type" content="website">
+        <meta property="og:site_name" content="Zachary Loeber"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/categories/microsoft/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
-	  <link href="https://zacharyloeber.com/categories/microsoft/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber&#39;s Site" />
+	  <link href="https://zacharyloeber.com/categories/microsoft/index.xml" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="https://zacharyloeber.com/categories/microsoft/index.xml" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
@@ -70,11 +70,11 @@
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
 
-                <span class="overlay"><i class="fa fa-home"></i></span>
+                <span class="overlay"><i class="fa favicon-32x32.png"></i></span>
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="/">Zachary Loeber&#39;s Site</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,7 +97,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2010/11/04/exchange-2010-sp1-dag-node-maintenance/">
+                <a class="bubble" href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -105,26 +105,24 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2010/11/04/exchange-2010-sp1-dag-node-maintenance/">Exchange 2010 SP1: DAG Node Maintenance</a></h3>
+    <h3><a href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/">Gather (and Diagram) Installed Roles and Features With Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2010-11-04</span>
+                <span class="date moment">2013-12-18</span>
             
         
 
         
-            <span class="readingTime">2 min read</span>
+            <span class="readingTime">1 min read</span>
         
 
         
             <span class="categories">
                 
-                    <a href="/categories/exchange">Exchange</a>
-                
                     <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="/categories/networking">Networking</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -137,20 +135,41 @@
     </div>
 
     
-        <p>If you are performing maintenance on DAG nodes here is the process you want to go through (along with a slight caveat to fix a possible active copy move issue you may run into). In my environment I have three nodes in a cross-site dag.</p>
-
-<p>All the commands below are run in an administrative exchange powershell prompt.</p>
+        <p>Use this powershell script to gather installed features and roles from remote systems. This uses two wmi classes in an attempt to gather as much information as possible. Win32_ServerFeature will contain roles and their dependencies on systems running Windows 2008 and above. For these systems we can use this hierarchy to also produce pretty diagrams using graphviz and techniques I&#8217;ve exhibited in some of my other scripts (I added this last part in cause it is easy to do, not really certain how useful it is other than maybe exploring the dependencies between windows roles/features).</p>
 
         
-            <a href="/blog/2010/11/04/exchange-2010-sp1-dag-node-maintenance/" class="more">Continue reading</a>
+            <a href="/blog/2013/12/18/gather-and-diagram-installed-roles-and-features-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/microsoft">Microsoft</a>
+                
+                    <a href="/tags/network-administration">network administration</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
+                
+                    <a href="/tags/scripting">Scripting</a>
+                
+                    <a href="/tags/sysadmin">Sysadmin</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
+                
+            </div>
+        </div>
     
 
     
@@ -163,7 +182,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2010/10/12/exchange-2010-sp1-web-services-fix/">
+                <a class="bubble" href="/blog/2013/12/16/google-charts-interactive-visualization-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -171,75 +190,11 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2010/10/12/exchange-2010-sp1-web-services-fix/">Exchange 2010 SP1: Web Services Fix</a></h3>
+    <h3><a href="/blog/2013/12/16/google-charts-interactive-visualization-with-powershell/">Google Charts: Interactive Visualization with Powershell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2010-10-12</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/exchange">Exchange</a>
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/office-communicator-server">Office Communicator Server</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>I&#8217;m utilizing 2 CAS servers behind an F5 load balancer and was finding that a migrated user to my new CAS array would get a red spat in communicator and get authorization prompts for the autodiscover url. I fixed it, finally, just today.</p>
-
-        
-            <a href="/blog/2010/10/12/exchange-2010-sp1-web-services-fix/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2010/08/02/microsoft-unified-access-gateway-2010-notes/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2010/08/02/microsoft-unified-access-gateway-2010-notes/">Microsoft Unified Access Gateway 2010 Notes</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2010-08-02</span>
+                <span class="date moment">2013-12-17</span>
             
         
 
@@ -252,73 +207,7 @@
                 
                     <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/unified-access-gateway">Unified Access Gateway</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>If you are new to the Microsoft Unified Access Gateway then you really should know some of these things I ran into while trying to get my array setup and running smoothly. Sure, to find my single post among the masses is probably not going to happen, but if you do find it before you start your endeavor then I promise you will be saved time and frustration. The first major frustration, the installation&#8230;.</p>
-
-        
-            <a href="/blog/2010/08/02/microsoft-unified-access-gateway-2010-notes/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2010/08/02/ocs-2007-r2-quick-script/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2010/08/02/ocs-2007-r2-quick-script/">OCS 2007 R2: Quick Script</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2010-08-02</span>
-            
-        
-
-        
-            <span class="readingTime">2 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/office-communicator-server">Office Communicator Server</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -331,18 +220,37 @@
     </div>
 
     
-        <p>I ran across this in one of the documents I wrote up while doing a side by side migration of our office communication server 2007  pool to 2007 R2. It is a quick script to automate the process of creating and assigning permissions for the shares needed in the front end server installation. I wrote it pretty quickly so use at your own discretion of course. Save as a .cmd or .bat and run directly on the front end server.</p>
+        <p>In this script I use powershell to gather system volume information which is then converted into a javascript array. This array is fed into the google charts to create a semi-attractive visualization of server disk space utilization in a single html report. Although this approach is a bit unconventional the results are both fun and useful.</p>
 
         
-            <a href="/blog/2010/08/02/ocs-2007-r2-quick-script/" class="more">Continue reading</a>
+            <a href="/blog/2013/12/16/google-charts-interactive-visualization-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/drive-space">Drive Space</a>
+                
+                    <a href="/tags/google-charts">Google Charts</a>
+                
+                    <a href="/tags/html-report">HTML Report</a>
+                
+                    <a href="/tags/javascript">Javascript</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/psc">PSC</a>
+                
+            </div>
+        </div>
     
 
     
@@ -355,7 +263,7 @@
     
         <div class="article-wrapper u-cf">
             
-                <a class="bubble" href="/blog/2010/07/01/windows-2008-and-2008-r2-tips/">
+                <a class="bubble" href="/blog/2013/11/25/lync-2013-monitoring-mirrored-sql-databases-with-powershell/">
     <i class="fa fa-fw fa-pencil"></i>
 </a>
 
@@ -363,24 +271,26 @@
     
 
     <div class="content">
-    <h3><a href="/blog/2010/07/01/windows-2008-and-2008-r2-tips/">Windows 2008 (and 2008 R2) Tips</a></h3>
+    <h3><a href="/blog/2013/11/25/lync-2013-monitoring-mirrored-sql-databases-with-powershell/">Lync 2013: Monitoring Mirrored SQL Databases With PowerShell</a></h3>
     <div class="meta">
         
             
-                <span class="date moment">2010-07-01</span>
+                <span class="date moment">2013-11-25</span>
             
         
 
         
-            <span class="readingTime">3 min read</span>
+            <span class="readingTime">5 min read</span>
         
 
         
             <span class="categories">
                 
+                    <a href="/categories/lync">Lync</a>
+                
                     <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="/categories/networking">Networking</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
                     <a href="/categories/system-administration">System Administration</a>
                 
@@ -393,142 +303,41 @@
     </div>
 
     
-        <p>Just a small list of 2008(R2) command line tips and tricks for the every day admin.</p>
+        <p>In Lync 2013 you are given a powerful new backend redundancy option for your important databases in the form of SQL mirroring. In this article I’ll discuss which services are able to be mirrored, the databases they encompass, and provide a PowerShell script to generate a report on the database mirror status. I also threw in Lync CMS replication and service status sections because it is the civil thing to do&#8230;</p>
 
         
-            <a href="/blog/2010/07/01/windows-2008-and-2008-r2-tips/" class="more">Continue reading</a>
+            <a href="/blog/2013/11/25/lync-2013-monitoring-mirrored-sql-databases-with-powershell/" class="more">Continue reading</a>
         
     
 </div>
 
     
-<div class="footer no-tags">
+<div class="footer">
 
 
     
-
-    
-</div>
-
-</article>
-
-            
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/lync">Lync</a>
+                
+                    <a href="/tags/lync-2013">Lync 2013</a>
+                
+                    <a href="/tags/microsoft">Microsoft</a>
+                
+                    <a href="/tags/monitoring">Monitoring</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/scripting">Scripting</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
+                
+            </div>
         </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2009/10/30/windows-some-small-system-administration-scripts/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2009/10/30/windows-some-small-system-administration-scripts/">Windows: Some Small System Administration Scripts</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2009-10-30</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-                    <a href="/categories/networking">Networking</a>
-                
-                    <a href="/categories/system-administration">System Administration</a>
-                
-                    <a href="/categories/vbscript/hta">vbscript/hta</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        <p>Here are a few scripts that I have cobbled together over the last few years. They are small and useful but nothing earth-shattering. One gets information about a remote system and who is logged in. The other can remotely reset the administrator password. Both obviously require  you have the permissions to do so on the remote machines. Both accept multiple computer names divided by a semi-colon.  Save and change the extension from .txt to .hta</p>
-
-<p><a rel="attachment wp-att-92" href="/?attachment_id=92"></a><a rel="attachment wp-att-97" href="/?attachment_id=97">GetAsset</a></p>
-
-<p><a rel="attachment wp-att-94" href="/?attachment_id=94">ResetAdminPass</a></p>
-
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="/blog/2008/01/29/mouting-isos-in-windows/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="/blog/2008/01/29/mouting-isos-in-windows/">Mouting ISO’s in Windows</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2008-01-29</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="/categories/microsoft">Microsoft</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        I just downloaded the 4 iso images needed to install vista and wanted to use vlite to make the 4 iso&#8217;s into one while at the same time removing a bunch of extra crap that gets installed by default. Well I have no desire to burn 4 discs just to have to copy them all back to the hard drive so I looked for an iso mounter to virtually access the files I needed.
-
-        
-            <a href="/blog/2008/01/29/mouting-isos-in-windows/" class="more">Continue reading</a>
-        
-    
-</div>
-
-    
-<div class="footer no-tags">
-
-
     
 
     
