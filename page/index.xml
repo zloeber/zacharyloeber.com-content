@@ -11,11 +11,11 @@
     
     
     <item>
-      <title>Github</title>
-      <link>https://zacharyloeber.com/page/github/</link>
+      <title>Home</title>
+      <link>https://zacharyloeber.com/page/home/</link>
       <pubDate>Wed, 01 Nov 2017 13:17:56 +0100</pubDate>
       
-      <guid>https://zacharyloeber.com/page/github/</guid>
+      <guid>https://zacharyloeber.com/page/home/</guid>
       <description></description>
     </item>
     
@@ -37,6 +37,15 @@
       <description>Zachary Loeber is an IT enthusiast with over a decade of experience in the field. Zach cut his teeth on a Tandy 2000 and BBS’s of the late 80′s and has been programming, building, and networking computers ever since.
 When it comes to technology Zach’s primary interests are:
  Security Networking System Administration Linux Windows VMware Exchange 2010 Powershell Automation  Some of Zach&amp;#8217;s other interests include lifting weights, camping, running, self-improvement, and being a good husband.</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://zacharyloeber.com/page/github/</link>
+      <pubDate>Wed, 01 Nov 2017 13:17:56 +0100</pubDate>
+      
+      <guid>https://zacharyloeber.com/page/github/</guid>
+      <description></description>
     </item>
     
   </channel>

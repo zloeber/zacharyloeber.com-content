@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zacharyloeber.com/page/home/</loc>
+    <lastmod>2017-11-01T13:17:56+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/page/about/</loc>
+    <lastmod>2008-07-27T00:24:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/page/about-me/</loc>
+    <lastmod>2007-11-01T21:18:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/page/github/</loc>
+    <lastmod>2017-11-01T13:17:56+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zacharyloeber.com/blog/2018/12/10/devops-tool-of-the-day-syncthing/</loc>
     <lastmod>2018-12-10T22:51:46+00:00</lastmod>
   </url>
@@ -35,16 +55,6 @@
   <url>
     <loc>https://zacharyloeber.com/blog/2018/01/10/powershell-office-365-group-based-licencing-cleanup/</loc>
     <lastmod>2018-01-11T03:35:52+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/page/github/</loc>
-    <lastmod>2017-11-01T13:17:56+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/link/duckduckgo/</loc>
-    <lastmod>2017-11-01T13:05:27+01:00</lastmod>
   </url>
   
   <url>
@@ -778,11 +788,6 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/page/about/</loc>
-    <lastmod>2008-07-27T00:24:04+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/blog/2008/07/11/ubuntu-server-804-post-install-tip-4-setup-smart/</loc>
     <lastmod>2008-07-11T15:37:55+00:00</lastmod>
   </url>
@@ -843,11 +848,6 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/page/about-me/</loc>
-    <lastmod>2007-11-01T21:18:48+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/2008-r2/</loc>
     <lastmod>2013-10-06T23:32:48+00:00</lastmod>
     <priority>0</priority>
@@ -868,12 +868,6 @@
   <url>
     <loc>https://zacharyloeber.com/tags/adsi/</loc>
     <lastmod>2014-04-11T21:17:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/article/</loc>
-    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1153,12 +1147,6 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/link/</loc>
-    <lastmod>2017-11-01T13:05:27+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/linux/</loc>
     <lastmod>2018-12-10T22:51:46+00:00</lastmod>
     <priority>0</priority>
@@ -1315,6 +1303,12 @@
   </url>
   
   <url>
+    <loc>https://zacharyloeber.com/old-articles/</loc>
+    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zacharyloeber.com/tags/oss/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
     <priority>0</priority>
@@ -1381,12 +1375,6 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/privacy/</loc>
-    <lastmod>2017-11-01T13:05:27+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/psc/</loc>
     <lastmod>2015-09-12T20:05:26+00:00</lastmod>
     <priority>0</priority>
@@ -1449,12 +1437,6 @@
   <url>
     <loc>https://zacharyloeber.com/tags/scripting/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/search-engine/</loc>
-    <lastmod>2017-11-01T13:05:27+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -1634,13 +1616,13 @@
   
   <url>
     <loc>https://zacharyloeber.com/</loc>
-    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
+    <lastmod>2017-11-01T13:17:56+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
-    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
+    <lastmod>2008-07-27T00:24:04+00:00</lastmod>
     <priority>0</priority>
   </url>
   

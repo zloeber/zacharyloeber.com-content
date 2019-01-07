@@ -1,4 +1,4 @@
-## Makefile for bootstrap and deployment of this project
+## Allow easy commits of this project
 GIT_BRANCH ?= master
 GIT_COMMIT_MESSAGE ?= Generate site
 
