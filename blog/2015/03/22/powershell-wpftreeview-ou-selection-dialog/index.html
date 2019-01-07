@@ -1,9 +1,136 @@
-<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content><meta name=description content><meta name=keywords content><meta name=generator content="Hugo 0.53"><title>Powershell: WPF/Treeview OU Selection Dialog |</title><meta name=description content="Powershell: WPF/Treeview OU Selection Dialog - %!s(&lt;nil&gt;)"><meta itemprop=name content="Powershell: WPF/Treeview OU Selection Dialog"><meta itemprop=description content="Powershell: WPF/Treeview OU Selection Dialog - %!s(&lt;nil&gt;)"><meta property=og:title content="Powershell: WPF/Treeview OU Selection Dialog"><meta property=og:description content="Powershell: WPF/Treeview OU Selection Dialog - %!s(&lt;nil&gt;)"><meta property=og:image content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200"><meta property=og:url content=https://zacharyloeber.com/blog/2015/03/22/powershell-wpftreeview-ou-selection-dialog/><meta property=og:site_name content><meta property=og:type content=article><link rel=icon type=image/png href=https://zacharyloeber.com/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://zacharyloeber.com/favicon-16x16.png sizes=16x16><link rel=stylesheet href=/sass/combined.min.5aca3dc995ccd40fd537c60ccb5ce5882145ec5d4c4827c15f277667981cc0de.css></head><body class=bilberry-hugo-theme><nav><div class=container><ul class=topnav><li><a href=https://github.com/zloeber target=_blank>Github</a></li><li><a href=/page/about/>About</a></li><li><a href=/page/about-me/>About Me</a></li></ul></div></nav><header><div class=container><div class=logo><a href=/ class=logo><img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm&size=200" alt>
-<span class=overlay><i class="fa fa-home"></i></span></a></div><div class=titles><h3 class=title><a href=/>My cool new blog</a></h3></div><div class=toggler><i class="fa fa-bars" aria-hidden=true></i></div></div></header><div class="main container"><div class="article-wrapper u-cf single"><a class=bubble href=/blog/2015/03/22/powershell-wpftreeview-ou-selection-dialog/><i class="fa fa-fw fa-pencil"></i></a><article class="default article"><div class=content><h3><a href=/blog/2015/03/22/powershell-wpftreeview-ou-selection-dialog/>Powershell: WPF/Treeview OU Selection Dialog</a></h3><div class=meta><span class="date moment">2015-03-22</span>
-<span class=categories><a href=/categories/active-directory>Active Directory</a>
-<a href=/categories/powershell>Powershell</a>
-<a href=/categories/system-administration>System Administration</a></span>
-<span class=author><a href=/author/zachary-loeber>Zachary Loeber</a></span></div><p class=projectSummary>This is a self-contained organizational unit selection dialog box using powershell, xaml, wpf, and ADSI. Should be useful in any number of one off Powershell projects I imagine.</p><pre class="lang:powershell decode:true">&lt;# 
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="generator" content="Hugo 0.53" />
+        <title> Powershell: WPF/Treeview OU Selection Dialog | </title>
+        <meta name="description" content="Powershell: WPF/Treeview OU Selection Dialog - %!s(&lt;nil&gt;)">
+        <meta itemprop="name" content="Powershell: WPF/Treeview OU Selection Dialog">
+        <meta itemprop="description" content="Powershell: WPF/Treeview OU Selection Dialog - %!s(&lt;nil&gt;)">
+        <meta property="og:title" content="Powershell: WPF/Treeview OU Selection Dialog">
+        <meta property="og:description" content="Powershell: WPF/Treeview OU Selection Dialog - %!s(&lt;nil&gt;)">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:url" content="https://zacharyloeber.com/blog/2015/03/22/powershell-wpftreeview-ou-selection-dialog/">
+        <meta property="og:site_name" content="">
+        <meta property="og:type" content="article">
+        <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
+
+	
+
+        
+        
+        
+        
+        <link rel="stylesheet" href="/sass/combined.min.5aca3dc995ccd40fd537c60ccb5ce5882145ec5d4c4827c15f277667981cc0de.css">
+
+        
+
+        
+    </head>
+    <body class="bilberry-hugo-theme">
+        
+<nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://github.com/zloeber" target="_blank">Github</a></li>
+                
+            
+                
+                    <li><a href="/page/about/">About</a></li>
+                
+            
+                
+                    <li><a href="/page/about-me/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+        <header>
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm&size=200" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title"><a href="/">My cool new blog</a></h3>
+            
+        </div>
+
+    
+
+        
+        <div class="toggler">
+        
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>
+
+
+        <div class="main container">
+            
+     
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="/blog/2015/03/22/powershell-wpftreeview-ou-selection-dialog/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/blog/2015/03/22/powershell-wpftreeview-ou-selection-dialog/">Powershell: WPF/Treeview OU Selection Dialog</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2015-03-22</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    <a href="/categories/active-directory">Active Directory</a>
+                
+                    <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/system-administration">System Administration</a>
+                
+            </span>
+        
+
+        
+            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
+        
+    </div>
+
+    
+        <p class="projectSummary">
+  This is a self-contained organizational unit selection dialog box using powershell, xaml, wpf, and ADSI. Should be useful in any number of one off Powershell projects I imagine.
+</p>
+
+<pre class="lang:powershell decode:true ">&lt;# 
     .SYNOPSIS 
     A self contained WPF/XAML treeview organizational unit selection dialog box. 
     .DESCRIPTION 
@@ -21,14 +148,236 @@
     https://github.com/zloeber/Powershell/blob/master/ActiveDirectory/Select-OU/Get-OUDialog.ps1 
     .LINK 
     http://zacharyloeber.com 
-    #&gt;</pre><p class=endscriptcode>Because I was lego building my other bits of code together for this function I do a few slightly wonky things to populate the treeview properly. I first generate a json exportable object of the tree based on CanonicalName of the OUs. Then I recursively create listitems with the data using the CanonicalName as the tag data. Then I return distinguishedName as the results by converting the CN to DN again with a super fast and dirty hack function. So, goal acccomplished but in a round about way.</p><p class=endscriptcode>There are some also rather largish functions included in this example for what was to be the beginning of a generic ADSI library. I use these to query AD to avoid any dependencies on the AD cmdlets (at the expense of blowing up the overall script size by quite a bit).</p><p class=endscriptcode>Anyway, I uploaded this to the <a href=https://gallery.technet.microsoft.com/Powershell-WPFTreeview-OU-addcb876>technet script gallery</a> and <a href=https://github.com/zloeber/Powershell/blob/master/ActiveDirectory/Select-OU/Get-OUDialog.ps1>my github repo</a>.</p></div><div class=footer><div class=tags><i class="fa fa-tags"></i><div class=links><a href=/tags/active-directory>Active Directory</a>
-<a href=/tags/microsoft>Microsoft</a>
-<a href=/tags/network-administration>network administration</a>
-<a href=/tags/powershell>Powershell</a>
-<a href=/tags/scripting>Scripting</a>
-<a href=/tags/sysadmin>Sysadmin</a>
-<a href=/tags/system-administration>System Administration</a>
-<a href=/tags/windows>Windows</a></div></div></div></article></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
-var d=document,s=d.createElement('script');s.async=true;s.src='//'+"zacharyloeber-com"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer><div class=container><div class=recent-posts><strong>Latest posts</strong><ul><li><a href=/blog/2018/12/10/devops-tool-of-the-day-syncthing/>Devops: Tool of the day – Syncthing</a></li><li><a href=/blog/2018/09/28/devops-automating-kubernetes-deployments/>DevOps – Automating Kubernetes Deployments</a></li><li><a href=/blog/2018/05/02/powershell-to-python-notes-from-the-field/>Powershell To Python Notes From The Field</a></li><li><a href=/blog/2018/03/26/powershell-windows-subsystem-for-linux/>PowerShell: Windows Subsystem For Linux</a></li><li><a href=/blog/2018/02/24/email-reputation-and-design-a-condensed-guide/>Email Reputation and Design: A Condensed Guide</a></li><li><a href=/blog/2018/02/04/powershell-azuread-dynamic-groups/>PowerShell: AzureAD Dynamic Groups</a></li><li><a href=/blog/2018/01/10/powershell-office-365-group-based-licencing-cleanup/>PowerShell: Office 365 Group Based Licencing Cleanup</a></li></ul></div><div class=categories><a href=/categories/><strong>Categories</strong></a><ul><li><a href=/categories/system-administration>System administration (130)</a></li><li><a href=/categories/microsoft>Microsoft (120)</a></li><li><a href=/categories/powershell>Powershell (106)</a></li><li><a href=/categories/networking>Networking (52)</a></li><li><a href=/categories/active-directory>Active directory (44)</a></li><li><a href=/categories/exchange>Exchange (38)</a></li><li><a href=/categories/exchange-2010>Exchange 2010 (38)</a></li></ul></div><div class=right><div class=external-profiles><strong>Social media</strong></div></div></div></footer><div class=credits><div class=container><div class=copyright><a href=https://github.com/Lednerb target=_blank>&copy;
-2018
-by Lednerb</a></div><div class=author><a href=https://github.com/Lednerb/bilberry-hugo-theme target=_blank>Bilberry Hugo Theme</a></div></div></div><script type=text/javascript src=/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script><script type=text/javascript src=/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script><script>$(".moment").each(function(){$(this).text(moment($(this).text()).locale("en").format('LL'));});$(".footnote-return sup").html("");</script></body></html>
+    #&gt;</pre>
+
+<p class="endscriptcode">
+  Because I was lego building my other bits of code together for this function I do a few slightly wonky things to populate the treeview properly. I first generate a json exportable object of the tree based on CanonicalName of the OUs. Then I recursively create listitems with the data using the CanonicalName as the tag data. Then I return distinguishedName as the results by converting the CN to DN again with a super fast and dirty hack function. So, goal acccomplished but in a round about way.
+</p>
+
+<p class="endscriptcode">
+  There are some also rather largish functions included in this example for what was to be the beginning of a generic ADSI library. I use these to query AD to avoid any dependencies on the AD cmdlets (at the expense of blowing up the overall script size by quite a bit).
+</p>
+
+<p class="endscriptcode">
+  Anyway, I uploaded this to the <a href="https://gallery.technet.microsoft.com/Powershell-WPFTreeview-OU-addcb876">technet script gallery</a> and <a href="https://github.com/zloeber/Powershell/blob/master/ActiveDirectory/Select-OU/Get-OUDialog.ps1">my github repo</a>.
+</p>
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/active-directory">Active Directory</a>
+                
+                    <a href="/tags/microsoft">Microsoft</a>
+                
+                    <a href="/tags/network-administration">network administration</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/scripting">Scripting</a>
+                
+                    <a href="/tags/sysadmin">Sysadmin</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "zacharyloeber-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+     
+
+        </div>
+
+        
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+                <ul>
+                
+                    <li>
+                        <a href="/blog/2018/12/10/devops-tool-of-the-day-syncthing/">Devops: Tool of the day – Syncthing</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/2018/09/28/devops-automating-kubernetes-deployments/">DevOps – Automating Kubernetes Deployments</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/2018/05/02/powershell-to-python-notes-from-the-field/">Powershell To Python Notes From The Field</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/2018/03/26/powershell-windows-subsystem-for-linux/">PowerShell: Windows Subsystem For Linux</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/2018/02/24/email-reputation-and-design-a-condensed-guide/">Email Reputation and Design: A Condensed Guide</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/2018/02/04/powershell-azuread-dynamic-groups/">PowerShell: AzureAD Dynamic Groups</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/2018/01/10/powershell-office-365-group-based-licencing-cleanup/">PowerShell: Office 365 Group Based Licencing Cleanup</a>
+                    </li>
+                
+                </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/categories/"><strong>Categories</strong></a>
+                <ul>
+                
+                    <li>
+                        <a href="/categories/system-administration">System administration (130)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/microsoft">Microsoft (120)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/powershell">Powershell (106)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/networking">Networking (52)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/active-directory">Active directory (44)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/exchange">Exchange (38)</a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/exchange-2010">Exchange 2010 (38)</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/Lednerb" target="_blank">
+                &copy;
+                
+                    2018
+                
+                by Lednerb
+            </a>
+	    
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme" target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+
+        
+        
+        <script type="text/javascript" src="/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js" integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script>
+
+        
+        
+        <script type="text/javascript" src="/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js" integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script>
+
+        <script>
+            $(".moment").each(function() {
+                $(this).text(
+                    moment( $(this).text() )
+                        .locale( "en" )
+                        .format('LL')
+                );
+            });
+
+            $(".footnote-return sup").html("");
+        </script>
+
+        
+
+        
+
+
+    </body>
+</html>
