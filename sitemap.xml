@@ -848,12 +848,6 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/</loc>
-    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/2008-r2/</loc>
     <lastmod>2013-10-06T23:32:48+00:00</lastmod>
     <priority>0</priority>
@@ -886,6 +880,11 @@
   <url>
     <loc>https://zacharyloeber.com/tags/ast/</loc>
     <lastmod>2015-07-27T16:27:55+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/author/</loc>
     <priority>0</priority>
   </url>
   
@@ -1630,6 +1629,18 @@
   <url>
     <loc>https://zacharyloeber.com/tags/wsl/</loc>
     <lastmod>2018-03-26T13:49:26+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
+    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/</loc>
+    <lastmod>2018-12-10T22:51:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
