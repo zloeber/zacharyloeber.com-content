@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Author on Zachary Loeber</title>
-    <link>https://zacharyloeber.com/author/</link>
+    <link>http://zacharyloeber.com/author/</link>
     <description>Recent content in Author on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://zacharyloeber.com/author/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zacharyloeber.com/author/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Zachary Loeber</title>
-      <link>https://zacharyloeber.com/author/zachary-loeber/</link>
+      <link>http://zacharyloeber.com/author/zachary-loeber/</link>
       <pubDate>Sun, 27 Jul 2008 00:24:04 +0000</pubDate>
       
-      <guid>https://zacharyloeber.com/author/zachary-loeber/</guid>
+      <guid>http://zacharyloeber.com/author/zachary-loeber/</guid>
       <description></description>
     </item>
     
