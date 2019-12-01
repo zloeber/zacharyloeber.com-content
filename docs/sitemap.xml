@@ -68,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/author/zachary-loeber/</loc>
+    <loc>https://.zacharyloeber.com/</loc>
     <lastmod>2018-12-10T22:51:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/</loc>
+    <loc>https://.zacharyloeber.com/author/zachary-loeber/</loc>
     <lastmod>2018-12-10T22:51:46+00:00</lastmod>
   </url>
   
@@ -113,12 +113,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/kubernetes/</loc>
+    <loc>https://.zacharyloeber.com/categories/kubernetes/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/kubernetes/</loc>
+    <loc>https://.zacharyloeber.com/tags/kubernetes/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
@@ -153,12 +153,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/powershell/</loc>
+    <loc>https://.zacharyloeber.com/tags/powershell/</loc>
     <lastmod>2018-05-03T02:29:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/powershell/</loc>
+    <loc>https://.zacharyloeber.com/categories/powershell/</loc>
     <lastmod>2018-05-03T02:29:53+00:00</lastmod>
   </url>
   
@@ -248,12 +248,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/cloud-pbx/</loc>
+    <loc>https://.zacharyloeber.com/tags/cloud-pbx/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/cloud-pbx/</loc>
+    <loc>https://.zacharyloeber.com/categories/cloud-pbx/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
@@ -333,12 +333,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/networking/</loc>
+    <loc>https://.zacharyloeber.com/categories/networking/</loc>
     <lastmod>2017-01-31T03:23:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/networking/</loc>
+    <loc>https://.zacharyloeber.com/tags/networking/</loc>
     <lastmod>2017-01-31T03:23:32+00:00</lastmod>
   </url>
   
@@ -378,12 +378,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/ossposh/</loc>
+    <loc>https://.zacharyloeber.com/categories/ossposh/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/ossposh/</loc>
+    <loc>https://.zacharyloeber.com/tags/ossposh/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
   </url>
   
@@ -1268,12 +1268,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/fiber/</loc>
+    <loc>https://.zacharyloeber.com/tags/fiber/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/fiber/</loc>
+    <loc>https://.zacharyloeber.com/categories/fiber/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
@@ -1283,12 +1283,12 @@
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/tags/virtual-connect/</loc>
+    <loc>https://.zacharyloeber.com/categories/virtual-connect/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://.zacharyloeber.com/categories/virtual-connect/</loc>
+    <loc>https://.zacharyloeber.com/tags/virtual-connect/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
