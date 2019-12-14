@@ -5,7 +5,7 @@
     <link>https://zacharyloeber.com/author/zachary-loeber/</link>
     <description>Recent content on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Dec 2018 22:51:46 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 12:26:30 -0600</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/author/zachary-loeber/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,6 +28,15 @@
       <description>Zachary Loeber is an IT enthusiast with over a decade of experience in the field. Zach cut his teeth on a Tandy 2000 and BBS’s of the late 80′s and has been programming, building, and networking computers ever since.
 When it comes to technology Zach’s primary interests are:
  Security Networking System Administration Linux Windows VMware Exchange 2010 Powershell Automation  Some of Zach&amp;#8217;s other interests include lifting weights, camping, running, self-improvement, and being a good husband.</description>
+    </item>
+    
+    <item>
+      <title>Hugo - A DevOps Approach</title>
+      <link>https://zacharyloeber.com/blog/2019/12/8/hugo-a-devops-approach/</link>
+      <pubDate>Sun, 08 Dec 2019 12:26:30 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/blog/2019/12/8/hugo-a-devops-approach/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve updated my site to use hugo some time ago. Recently I&amp;rsquo;ve found some time to add a deployment pipeline for this site as well. This short article will cover how the pipeline code works and dive into multi-stage pipelines.&lt;/p&gt;</description>
     </item>
     
     <item>

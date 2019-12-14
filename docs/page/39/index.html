@@ -20,19 +20,21 @@
         <link rel="icon" type="image/png" href="https://zacharyloeber.com/favicon-16x16.png" sizes="16x16">
 
 	
-	  <link href="https://zacharyloeber.com/" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
-	  <link href="https://zacharyloeber.com/" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="/" rel="alternate" type="application/rss+xml" title="Zachary Loeber" />
+	  <link href="/" rel="feed" type="application/rss+xml" title="Zachary Loeber" />
 	
 
         
         
         
         
-        <link rel="stylesheet" href="https://zacharyloeber.com/sass/combined.min.5f50be91a665634f9dfed5900bc388393fc430e3369d58e73b8375457a6df832.css">
+        <link rel="stylesheet" href="/sass/combined.min.5f50be91a665634f9dfed5900bc388393fc430e3369d58e73b8375457a6df832.css">
 
         
 
         
+            
+                <link rel="stylesheet" href="https://zacharyloeber.com/css/mermaid.css">
             
         
     </head>
@@ -44,7 +46,7 @@
         <ul class="topnav">
             
                 
-                    <li><a href="https://zacharyloeber.com/" target="">Home</a></li>
+                    <li><a href="/" target="">Home</a></li>
                 
             
                 
@@ -65,7 +67,7 @@
         <header>
     <div class="container">
         <div class="logo">
-            <a href="https://zacharyloeber.com/" class="logo">
+            <a href="/" class="logo">
                 
                     <img src="https://www.gravatar.com/avatar/48fc6231ab6cad25f101a82e5932d9dd?d=mm&size=200" alt="">
                 
@@ -74,7 +76,7 @@
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="https://zacharyloeber.com/">Zachary Loeber</a></h3>
+            <h3 class="title"><a href="/">Zachary Loeber</a></h3>
             
                 <span class="subtitle">The personal website of Zachary Loeber.</span>
             
@@ -97,6 +99,97 @@
 
 
     
+
+    
+        
+    <div class="article-wrapper u-cf">
+        
+            <a class="bubble" href="https://zacharyloeber.com/blog/2011/08/19/exchange-2010-one-liner-get-all-network-interface-information/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="https://zacharyloeber.com/blog/2011/08/19/exchange-2010-one-liner-get-all-network-interface-information/">Exchange 2010 One-liner: Get All Network Interface Information</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2011-08-19</span>
+            
+        
+
+        
+            <span class="readingTime">1 min read</span>
+        
+
+        
+            <span class="categories">
+                
+                    <a href="/categories/exchange">Exchange</a>
+                
+                    <a href="/categories/exchange-2010">Exchange 2010</a>
+                
+                    <a href="/categories/microsoft">Microsoft</a>
+                
+                    <a href="/categories/networking">Networking</a>
+                
+                    <a href="/categories/powershell">Powershell</a>
+                
+                    <a href="/categories/system-administration">System Administration</a>
+                
+            </span>
+        
+
+        
+            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
+        
+    </div>
+
+    
+        Here are a few quick powershell one-liners to get all the network interface information in your exchange environment:
+$ExchServers=(Get-ExchangeServer); @(foreach ($Srv in $ExchServers) {Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName $Srv.Name | select @{Name="Server";Expression={$Srv.Name}},@{Name="DNS Host Name";Expression={$_.DNSHostName}},@{Name="Server Role";Expression={$Srv.ServerRole}},Description,@{Name="IP Address";Expression={$_.IPAddress}},@{Name="IP Subnet";Expression={$_.IPSubnet}},@{Name="Default Gateway";Expression={$_.DefaultIPGateway}},@{Name="Mac Address";Expression={$_.MacAddress}},@{Name="DNS Suffix Search Order";Expression={$_.DNSDomainSuffixSearchOrder}},@{Name="DNS Server Search Order";Expression={$_.DNSServerSearchOrder}},FullDNSRegistrationEnabled}) |Export-Csv -NoTypeInformation "C:\Temp\Exchange-network.csv" If you just want interface information for Exchange 2010 servers:
+$ExchServers=(Get-ExchangeServer | where {$_.ServerRole -ne "None"}); @(foreach ($Srv in $ExchServers) {Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName $Srv.
+
+        
+            <a href="https://zacharyloeber.com/blog/2011/08/19/exchange-2010-one-liner-get-all-network-interface-information/" class="more">Continue reading</a>
+        
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/exchange-2010">Exchange 2010</a>
+                
+                    <a href="/tags/microsoft">Microsoft</a>
+                
+                    <a href="/tags/networking">Networking</a>
+                
+                    <a href="/tags/powershell">Powershell</a>
+                
+                    <a href="/tags/system-administration">System Administration</a>
+                
+                    <a href="/tags/windows">Windows</a>
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
 
     
         
@@ -125,19 +218,19 @@
         
             <span class="categories">
                 
-                    <a href="https://zacharyloeber.com/categories/exchange-2010">Exchange 2010</a>
+                    <a href="/categories/exchange-2010">Exchange 2010</a>
                 
-                    <a href="https://zacharyloeber.com/categories/microsoft">Microsoft</a>
+                    <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="https://zacharyloeber.com/categories/powershell">Powershell</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
-                    <a href="https://zacharyloeber.com/categories/system-administration">System Administration</a>
+                    <a href="/categories/system-administration">System Administration</a>
                 
             </span>
         
 
         
-            <span class="author"><a href="https://zacharyloeber.com/author/zachary-loeber">Zachary Loeber</a></span>
+            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
         
     </div>
 
@@ -159,17 +252,17 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="https://zacharyloeber.com/tags/exchange-2010">Exchange 2010</a>
+                    <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="https://zacharyloeber.com/tags/microsoft">Microsoft</a>
+                    <a href="/tags/microsoft">Microsoft</a>
                 
-                    <a href="https://zacharyloeber.com/tags/networking">Networking</a>
+                    <a href="/tags/networking">Networking</a>
                 
-                    <a href="https://zacharyloeber.com/tags/powershell">Powershell</a>
+                    <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="https://zacharyloeber.com/tags/system-administration">System Administration</a>
+                    <a href="/tags/system-administration">System Administration</a>
                 
-                    <a href="https://zacharyloeber.com/tags/windows">Windows</a>
+                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
@@ -210,21 +303,21 @@
         
             <span class="categories">
                 
-                    <a href="https://zacharyloeber.com/categories/active-directory">Active Directory</a>
+                    <a href="/categories/active-directory">Active Directory</a>
                 
-                    <a href="https://zacharyloeber.com/categories/microsoft">Microsoft</a>
+                    <a href="/categories/microsoft">Microsoft</a>
                 
-                    <a href="https://zacharyloeber.com/categories/powershell">Powershell</a>
+                    <a href="/categories/powershell">Powershell</a>
                 
-                    <a href="https://zacharyloeber.com/categories/security">Security</a>
+                    <a href="/categories/security">Security</a>
                 
-                    <a href="https://zacharyloeber.com/categories/system-administration">System Administration</a>
+                    <a href="/categories/system-administration">System Administration</a>
                 
             </span>
         
 
         
-            <span class="author"><a href="https://zacharyloeber.com/author/zachary-loeber">Zachary Loeber</a></span>
+            <span class="author"><a href="/author/zachary-loeber">Zachary Loeber</a></span>
         
     </div>
 
@@ -246,91 +339,17 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="https://zacharyloeber.com/tags/2008-r2">2008 R2</a>
+                    <a href="/tags/2008-r2">2008 R2</a>
                 
-                    <a href="https://zacharyloeber.com/tags/active-directory">Active Directory</a>
+                    <a href="/tags/active-directory">Active Directory</a>
                 
-                    <a href="https://zacharyloeber.com/tags/microsoft">Microsoft</a>
+                    <a href="/tags/microsoft">Microsoft</a>
                 
-                    <a href="https://zacharyloeber.com/tags/powershell">Powershell</a>
+                    <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="https://zacharyloeber.com/tags/system-administration">System Administration</a>
+                    <a href="/tags/system-administration">System Administration</a>
                 
-                    <a href="https://zacharyloeber.com/tags/windows">Windows</a>
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-        
-    </div>
-
-    
-        
-    <div class="article-wrapper u-cf">
-        
-            <a class="bubble" href="https://zacharyloeber.com/blog/2011/08/05/css-pretty-formatting/">
-    <i class="fa fa-fw fa-pencil"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h3><a href="https://zacharyloeber.com/blog/2011/08/05/css-pretty-formatting/">CSS: Pretty Code Snippet Formatting</a></h3>
-    <div class="meta">
-        
-            
-                <span class="date moment">2011-08-05</span>
-            
-        
-
-        
-            <span class="readingTime">1 min read</span>
-        
-
-        
-            <span class="categories">
-                
-                    <a href="https://zacharyloeber.com/categories/other">Other</a>
-                
-                    <a href="https://zacharyloeber.com/categories/web-publishing">Web Publishing</a>
-                
-            </span>
-        
-
-        
-            <span class="author"><a href="https://zacharyloeber.com/author/zachary-loeber">Zachary Loeber</a></span>
-        
-    </div>
-
-    
-        I forgot where I dredged this up from but here is how I do my code/script posts. I modified the default theme css and add the following for pre-formatted text:
-pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */ white-space: -o-pre-wrap; /* Opera 7 */ word-wrap: break-word; /* Internet Explorer 5.5+ */ background: #000000; color: #21FF2C; } 
-
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    <a href="https://zacharyloeber.com/tags/other">Other</a>
-                
-                    <a href="https://zacharyloeber.com/tags/system-administration">System Administration</a>
-                
-                    <a href="https://zacharyloeber.com/tags/web-publishing">Web Publishing</a>
+                    <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
@@ -349,11 +368,11 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; 
     
     <div class="paginator">
         
-            <a href="https://zacharyloeber.com/page/40/" class="older"><i class="fa fa-angle-double-left"></i> Older posts</a>
+            <a href="/page/40/" class="older"><i class="fa fa-angle-double-left"></i> Older posts</a>
         
 
         
-            <a href="https://zacharyloeber.com/page/38/" class="newer">Newer posts <i class="fa fa-angle-double-right"></i></a>
+            <a href="/page/38/" class="newer">Newer posts <i class="fa fa-angle-double-right"></i></a>
         
     </div>
 
@@ -371,15 +390,15 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; 
                 <ul>
                 
                     <li>
+                        <a href="https://zacharyloeber.com/blog/2019/12/8/hugo-a-devops-approach/">Hugo - A DevOps Approach</a>
+                    </li>
+                
+                    <li>
                         <a href="https://zacharyloeber.com/blog/2018/12/10/devops-tool-of-the-day-syncthing/">Devops: Tool of the day – Syncthing</a>
                     </li>
                 
                     <li>
                         <a href="https://zacharyloeber.com/blog/2018/09/28/devops-automating-kubernetes-deployments/">DevOps – Automating Kubernetes Deployments</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://zacharyloeber.com/blog/2018/05/02/powershell-to-python-notes-from-the-field/">Powershell To Python Notes From The Field</a>
                     </li>
                 
                 </ul>
@@ -388,27 +407,27 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; 
 
         
         <div class="categories">
-            <a href="https://zacharyloeber.com/categories/"><strong>Categories</strong></a>
+            <a href="/categories/"><strong>Categories</strong></a>
                 <ul>
                 
                     <li>
-                        <a href="https://zacharyloeber.com/categories/system-administration">System administration (130)</a>
+                        <a href="/categories/system-administration">System administration (130)</a>
                     </li>
                 
                     <li>
-                        <a href="https://zacharyloeber.com/categories/microsoft">Microsoft (120)</a>
+                        <a href="/categories/microsoft">Microsoft (120)</a>
                     </li>
                 
                     <li>
-                        <a href="https://zacharyloeber.com/categories/powershell">Powershell (106)</a>
+                        <a href="/categories/powershell">Powershell (106)</a>
                     </li>
                 
                     <li>
-                        <a href="https://zacharyloeber.com/categories/networking">Networking (52)</a>
+                        <a href="/categories/networking">Networking (52)</a>
                     </li>
                 
                     <li>
-                        <a href="https://zacharyloeber.com/categories/active-directory">Active directory (44)</a>
+                        <a href="/categories/active-directory">Active directory (44)</a>
                     </li>
                 
             </ul>
@@ -434,6 +453,8 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; 
                 
                     <a href="https://github.com/zloeber" target="_blank"><i class="fa fa-github"></i></a>
                 
+                
+                    <a href="https://www.linkedin.com/in/zloeber/" target="_blank"><i class="fa fa-linkedin"></i></a>
                 
             </div>
             
@@ -470,11 +491,11 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; 
 
         
         
-        <script type="text/javascript" src="https://zacharyloeber.com/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js" integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script>
+        <script type="text/javascript" src="/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js" integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script>
 
         
         
-        <script type="text/javascript" src="https://zacharyloeber.com/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js" integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script>
+        <script type="text/javascript" src="/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js" integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script>
 
         <script>
             $(".moment").each(function() {
@@ -489,6 +510,8 @@ pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; 
         </script>
 
         
+            
+                <script src="https://zacharyloeber.com/js/mermaid.js" type="application/javascript"></script>
             
         
 
