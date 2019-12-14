@@ -43,12 +43,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/devops/</loc>
+    <loc>https://zacharyloeber.com/categories/devops/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/devops/</loc>
+    <loc>https://zacharyloeber.com/tags/devops/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
@@ -158,22 +158,22 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/kubernetes/</loc>
-    <lastmod>2018-09-28T16:49:46+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/kubernetes/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/microservices/</loc>
+    <loc>https://zacharyloeber.com/categories/kubernetes/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/microservices/</loc>
+    <lastmod>2018-09-28T16:49:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/microservices/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
@@ -198,12 +198,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/powershell/</loc>
+    <loc>https://zacharyloeber.com/tags/powershell/</loc>
     <lastmod>2018-05-03T02:29:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/powershell/</loc>
+    <loc>https://zacharyloeber.com/categories/powershell/</loc>
     <lastmod>2018-05-03T02:29:53+00:00</lastmod>
   </url>
   
@@ -288,12 +288,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/cloud-pbx/</loc>
+    <loc>https://zacharyloeber.com/categories/cloud-pbx/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/cloud-pbx/</loc>
+    <loc>https://zacharyloeber.com/tags/cloud-pbx/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
@@ -313,12 +313,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/skype-for-business/</loc>
+    <loc>https://zacharyloeber.com/tags/skype-for-business/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/skype-for-business/</loc>
+    <loc>https://zacharyloeber.com/categories/skype-for-business/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
@@ -418,12 +418,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/ossposh/</loc>
+    <loc>https://zacharyloeber.com/categories/ossposh/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/ossposh/</loc>
+    <loc>https://zacharyloeber.com/tags/ossposh/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
   </url>
   
