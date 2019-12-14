@@ -147,21 +147,214 @@
     
         <p>While specing out a Sharepoint 2007 to 2010 migration I discovered that the default monitor created by the application template on our big-ip LTM load balancers does not work. In seeking a solution I ran across this <a href="http://www.thef5guy.com/blog/2010/08/sharepoint-2010-ntlm-and-big-ip-health-monitors/#more-1070" target="_blank">gentleman&#8217;s blog with a custom external monitor</a> but found that it didn&#8217;t really work. The solution to make it work was simple (as I explained on his blog in a comment). I went ahead and extended it to be more environment generic.</p>
 
-        
-            <a href="https://zacharyloeber.com/blog/2011/01/21/big-ip-sharepoint-2010-monitor/" class="more">Continue reading</a>
-        
+<p>Copy this script to /user/bin/monitors/sharepoint2010.sh and chmod +x the file to use.</p>
+
+<pre>#!/bin/bash
+# A custom NTLM capable sharepoint (or other site capable) health script for your big-ip load balancers
+# Zachary Loeber 01/21/2011
+# Save as /usr/bin/monitors/sharepoint2010.sh
+# Make executable using chmod 700 sharepoint2010.sh
+# The following variables should be set to get this to work properly
+#
+# URI: part of the site you want to use as your monitor (ie. _layouts/recyclebin.aspx)
+# LOOKFOR: what will be returned that shows the site is up (ie. deleted)
+# HOSTHEAD: the host header to use for the site (ie. sharepoint.corp.contoso.com)
+# NTLMUSER: an account which can access this uri (ie. svcSPLBMonitoring@corp.contoso.com)
+# NTLMPASS: the password of the above user (ie. password1)
+# DEBUG: optional variable for debugging purposes, can be set to 0 or 1
+
+# Log debug to local0.debug (/var/log/ltm)?
+# Check if a variable named DEBUG exists from the monitor definition
+# This can be set using a monitor variable DEBUG=0 or 1
+if [ -n "$DEBUG" ]
+then
+ if [ $DEBUG -eq 1 ]; then echo "EAV `basename $0`: \$DEBUG: $DEBUG" | logger -p local0.debug; fi
+else
+ # If the monitor config didn't specify debug, enable/disable it here
+ DEBUG=0
+ #echo "EAV `basename $0`: \$DEBUG: $DEBUG" | logger -p local0.debug
+fi
+
+# Remove IPv6/IPv4 compatibility prefix (LTM passes addresses in IPv6 format)
+IP=`echo $1 | sed 's/::ffff://'`
+
+# Save the port for use in the shell command
+PORT=$2
+
+# Check if there is a prior instance of the monitor running
+pidfile="/var/run/`basename $0`.$IP.$PORT.pid"
+if [ -f $pidfile ]
+then
+ kill -9 `cat $pidfile` &gt; /dev/null 2&gt;&1
+ echo "EAV `basename $0`: exceeded monitor interval, needed to kill ${IP}:${PORT} with PID `cat $pidfile`" | logger -p local0.error
+fi
+
+# Add the current PID to the pidfile
+echo "$$" &gt; $pidfile
+
+####  Customize the shell command to run here. ###
+# Use $IP and $PORT to specify which host/port to perform the check against
+# Modify this portion of the line:
+# nc $IP $PORT | grep "my receive string"
+# And leave this portion as is:
+# '2&gt;&1 &gt; /dev/null'
+# The above code redirects stderr and stdout to nothing to ensure we don't errantly mark the pool member up
+
+# Send the request request and check the response
+curl -H "Host: $HOSTHEAD" -fNs --ntlm -k --user "$NTLMUSER:$NTLMPASS" \
+ "http://$IP:$PORT/$URI" | grep -i "$LOOKFOR" 2&gt;&1 &gt; /dev/null
+
+ # Check if the command ran successfully
+# Note that any standard output will result in the script execution being stopped
+# So do any cleanup before echoing to STDOUT
+if [ $? -eq 0 ]
+then
+ echo "UP"
+ rm -f $pidfile
+ if [ $DEBUG -eq 1 ]; then echo "EAV `basename $0`: Succeeded for ${IP}:${PORT}" | logger -p local0.debug; fi
+else
+ rm -f $pidfile
+ if [ $DEBUG -eq 1 ]; then echo "EAV `basename $0`: Failed for ${IP}:${PORT}" | logger -p local0.debug; fi
+fi
+
+# Debug
+if [ $DEBUG -eq 1 ]
+then
+ ####  Customize the log statement here if you want to log the command run or the output ####
+ echo "EAV `basename $0`: Running for ${IP}:${PORT} using custom command" | logger -p local0.debug
+fi
+</pre>
+
+<p>Here is an example health monitor configuration:</p>
+
+<p><img style="max-width: 800px;" src="/wp-content/uploads/2011/01/big-ip_sharepoint_monitor1.jpg?w=586" alt="" data-recalc-dims="1" /></p>
     
 </div>
 
     
-<div class="footer no-tags">
+    <div class="footer no-tags">
+        
+
+        
+
+        
+        
 
 
-    
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-    
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons>div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons>div>svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons>div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons>div.facebook:hover>svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons>div.twitter:hover>svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons>div.linkedin:hover>svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons>div.pinterest:hover>svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons>div.gplus:hover>svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons>div.mail:hover>svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons>div.instagram:hover>svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons>div.facebook>svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.twitter>svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons>div.linkedin>svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons>div.pinterest>svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.gplus>svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons>div.mail>svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+        onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/zacharyloeber.com\/\/blog\/2011\/01\/21\/big-ip-sharepoint-2010-monitor\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
+        </svg></div>
+    <div class="twitter" title="Share this on Twitter"
+        onclick="window.open('http://twitter.com/home?status=https:\/\/zacharyloeber.com\/\/blog\/2011\/01\/21\/big-ip-sharepoint-2010-monitor\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
+        </svg></div>
+    <div class="linkedin" title="Share this on Linkedin"
+        onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/zacharyloeber.com\/\/blog\/2011\/01\/21\/big-ip-sharepoint-2010-monitor\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
+        </svg></div>
 </div>
-
+    </div>
 </article>
 
             

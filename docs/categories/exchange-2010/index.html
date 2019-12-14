@@ -149,152 +149,157 @@
     
         <p>When your users leave or get removed from the organization they may still be getting company confidential information. Here is how you can find out and stop this from happening.</p>
 
-<p>I&#8217;ve seen this in numerous organizations so I figured I&#8217;d toss up a quick post and script for those who are interested in minimizing email exfiltration from occurring. Imagine this scenario:</p>
-
-<ol>
-<li>Bob from sales is going to be moving on from the organization. He has given his two weeks and is careful not to burn bridges on the way out (so he is not abruptly terminated).</li>
-<li>On his last day his AD account is disabled, password reset, and his activesync devices are removed and remote wiped.</li>
-<li>As an additional measure Bob&#8217;s AD account had all groups removed and was moved to a &#8216;Disabled&#8217; organizational unit.</li>
-<li>His replacement is delegated rights to access and manage his mailbox so they can respond to clients he may have been working with.</li>
-<li>Bob goes on to work for a competitor. Somehow Bob always seems to be able to reach out to and connect with prospective clients of yours that come in through an inquiry form on your website. He has managed to spear several large clients for his new employer because of this.</li>
-</ol>
-
-<p>In the above example what is not said is that Bob setup some inbox rules in Outlook to forward a copy of any email received to another email account outside of the organization! Even if he was removed from all groups it wouldn&#8217;t matter if there were another inbox rule forwarding him the web inquiries (or even worse, if the web form just emailed a static list of users). This also doesn&#8217;t account for dynamic distribution lists which may be based on attributes  which are not cleared in the off-boarding process.</p>
-
-<p>The gist of the issue is that email which should not be leaving the organization is flowing out to external sources. The quickest way to determine if this is something your organization suffers from is with a quick PowerShell Script.</p>
-
-<pre class="lang:powershell decode:true">function Get-MailboxForwardAndRedirectRules {
-    &lt;#
-    .SYNOPSIS
-    Retrieves a list of mailbox rules which forward or redirect email elsewhere.
-    .DESCRIPTION
-    Retrieves a list of mailbox rules which forward or redirect email elsewhere.
-    .PARAMETER MailboxNames
-    Array of mailbox names in string format.    
-    .PARAMETER MailboxObject
-    One or more mailbox objects.
-    .EXAMPLE
-    Get-MailboxForwardAndRedirectRules -MailboxName "Test User1"
-    
-    Description
-    -----------
-    List test user1 forwarding and redirect rules.
-
-    .EXAMPLE
-    Get-Mailbox -ResultSize Unlimited | Get-MailboxForwardAndRedirectRules
-    
-    Description
-    -----------
-    List entire organization's inbox forwarding and redirecting rules.
-    
-    .LINK
-    http://zacharyloeber.com
-    .NOTES
-    Last edit   :   11/04/2014
-    Version     :   
-    1.2.0 09/22/2015
-    - Due to the moronic double pipeline limitations of Exchange 2010 I restructured the code
-      to do all the processing in the end block (cause the process block is a pipeline after all...)
-    - Added additional information to output (like AD disabled state and rule descriptions)
-    1.1.0 11/04/2014
-    - Minor structual changes and input parameter updates
-    1.0.0 10/04/2014
-    - Initial release
-    Author      :   Zachary Loeber
-    Original Author: https://gallery.technet.microsoft.com/PowerShell-Script-To-Get-0f1bb6a7/
-    #&gt;
-    [CmdLetBinding(DefaultParameterSetName='AsMailbox')]
-    param(
-        [Parameter(ParameterSetName='AsStringArray', Mandatory=$True, ValueFromPipeline=$True, Position=0, HelpMessage="Enter an Exchange mailbox name")]
-        [string[]]$MailboxNames,
-        [Parameter(ParameterSetName='AsMailbox', Mandatory=$True, ValueFromPipeline=$True, Position=0, HelpMessage="Enter an Exchange mailbox name")]
-        $MailboxObject
-    )
-    begin {
-        $FunctionName = $MyInvocation.MyCommand.Name
-        Write-Verbose "$($FunctionName): Begin"
-        $Mailboxes = @()
-    }
-    process {
-        switch ($PSCmdlet.ParameterSetName) {
-            'AsStringArray' {
-                try {
-                    $Mailboxes = @($MailboxNames | Foreach {Get-Mailbox $_ -erroraction Stop})
-                }
-                catch {
-                    Write-Warning = "$($FunctionName): $_.Exception.Message"
-                }
-            }
-            'AsMailbox' {
-               $Mailboxes += @($MailboxObject)
-            }
-        }
-    }
-    end {
-        foreach ($Mailbox in $Mailboxes) {
-            $UserInfo = Get-User $Mailbox.DistinguishedName 
-            Write-Verbose "$($FunctionName): Checking $($Mailbox.Name)"
-            Get-InboxRule -mailbox $Mailbox.DistinguishedName | Where {
-                    ($_.forwardto -ne $null) -or 
-                    ($_.redirectto -ne $null) -or 
-                    ($_.ForwardAsAttachmentTo -ne $null) -and 
-                    ($_.ForwardTo -notmatch "EX:/") -and 
-                    ($_.RedirectTo -notmatch "EX:/") -and 
-                    ($_.ForwardAsAttachmentTo -notmatch "EX:/")} | 
-                Select @{n="Mailbox";e={($Mailbox.Name)}}, `
-                       @{n="SAMAccountName";e={$UserInfo.SAMAccountName}}, `
-                       @{n="ADAccountEnabled";e={-not ($UserInfo.UserAccountControl -match 'AccountDisabled')}}, `
-                       @{n="DistinguishedName";e={($Mailbox.DistinguishedName)}}, `
-                       @{n="RuleName";e={$_.name}}, `
-                       @{n="Identity";e={$_.Identity}}, `
-                       @{n="RuleEnabled";e={$_.Enabled}}, `
-                       @{n="RuleDescription";e={$_.Description}}, `
-                       @{Name="ForwardTo";Expression={[string]::join(";",($_.forwardTo))}}, `
-                       @{Name="RedirectTo";Expression={[string]::join(";",($_.redirectTo))}}, `
-                       @{Name="ForwardAsAttachmentTo";Expression={[string]::join(";",($_.ForwardAsAttachmentTo))}}
-        }
-        Write-Verbose "$($FunctionName): End"
-    }
-}</pre>
-
-<p>This should run on Exchange <sup>2010</sup>&frasl;<sub>2013</sub> and Office 365 (I&#8217;ve not tested for Exchange 2007). The results should provide everything you need to find out which disabled accounts are forwarding email outside of the organization with something like this:</p>
-
-<pre class="lang:powershell decode:true">Get-Mailbox -ResultSize Unlimited | Get-MailboxForwardAndRedirectRules | Export-CSV -NoTypeInformation 'Forwarding.csv'</pre>
-
-<p>Once inbox rules are found it is a simple matter of piping ones you want removed to Remove-InboxRule. I&#8217;ve posted this script <a href="https://github.com/zloeber/Powershell/blob/master/Exchange/Get-MailboxForwardAndRedirectRules.ps1">in my Github repo</a> some time ago but made some improvements recently. Anyway, It may be worth a few of your cycles to run this in your own environment to see if any wayward email is flowing out of your organization.</p>
+        
+            <a href="https://zacharyloeber.com/blog/2015/09/24/excxhange-stop-email-exfiltration/" class="more">Continue reading</a>
+        
     
 </div>
 
     
 <div class="footer">
-
-
     
+
+        
         <div class="tags">
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
+                <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/tags/exchange-2013">Exchange 2013</a>
+                <a href="/tags/exchange-2013">Exchange 2013</a>
                 
-                    <a href="/tags/microsoft">Microsoft</a>
+                <a href="/tags/microsoft">Microsoft</a>
                 
-                    <a href="/tags/network-administration">network administration</a>
+                <a href="/tags/network-administration">network administration</a>
                 
-                    <a href="/tags/office-365">Office 365</a>
+                <a href="/tags/office-365">Office 365</a>
                 
-                    <a href="/tags/powershell">Powershell</a>
+                <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/system-administration">System Administration</a>
+                <a href="/tags/system-administration">System Administration</a>
                 
             </div>
         </div>
-    
+        
 
-    
+        
+        
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons>div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons>div>svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons>div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons>div.facebook:hover>svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons>div.twitter:hover>svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons>div.linkedin:hover>svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons>div.pinterest:hover>svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons>div.gplus:hover>svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons>div.mail:hover>svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons>div.instagram:hover>svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons>div.facebook>svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.twitter>svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons>div.linkedin>svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons>div.pinterest>svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.gplus>svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons>div.mail>svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+        onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/zacharyloeber.com\/\/blog\/2015\/09\/24\/excxhange-stop-email-exfiltration\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
+        </svg></div>
+    <div class="twitter" title="Share this on Twitter"
+        onclick="window.open('http://twitter.com/home?status=https:\/\/zacharyloeber.com\/\/blog\/2015\/09\/24\/excxhange-stop-email-exfiltration\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
+        </svg></div>
+    <div class="linkedin" title="Share this on Linkedin"
+        onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/zacharyloeber.com\/\/blog\/2015\/09\/24\/excxhange-stop-email-exfiltration\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
+        </svg></div>
 </div>
-
+    </div>
 </article>
 
             
@@ -356,38 +361,153 @@
 
     
 <div class="footer">
-
-
     
+
+        
         <div class="tags">
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
+                <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/tags/exchange-2013">Exchange 2013</a>
+                <a href="/tags/exchange-2013">Exchange 2013</a>
                 
-                    <a href="/tags/microsoft">Microsoft</a>
+                <a href="/tags/microsoft">Microsoft</a>
                 
-                    <a href="/tags/powershell">Powershell</a>
+                <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/psc">PSC</a>
+                <a href="/tags/psc">PSC</a>
                 
-                    <a href="/tags/scripting">Scripting</a>
+                <a href="/tags/scripting">Scripting</a>
                 
-                    <a href="/tags/sysadmin">Sysadmin</a>
+                <a href="/tags/sysadmin">Sysadmin</a>
                 
-                    <a href="/tags/system-administration">System Administration</a>
+                <a href="/tags/system-administration">System Administration</a>
                 
-                    <a href="/tags/windows">Windows</a>
+                <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
-    
+        
 
-    
+        
+        
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons>div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons>div>svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons>div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons>div.facebook:hover>svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons>div.twitter:hover>svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons>div.linkedin:hover>svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons>div.pinterest:hover>svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons>div.gplus:hover>svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons>div.mail:hover>svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons>div.instagram:hover>svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons>div.facebook>svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.twitter>svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons>div.linkedin>svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons>div.pinterest>svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.gplus>svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons>div.mail>svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+        onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/zacharyloeber.com\/\/blog\/2015\/04\/06\/exchange-database-leveling-redux\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
+        </svg></div>
+    <div class="twitter" title="Share this on Twitter"
+        onclick="window.open('http://twitter.com/home?status=https:\/\/zacharyloeber.com\/\/blog\/2015\/04\/06\/exchange-database-leveling-redux\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
+        </svg></div>
+    <div class="linkedin" title="Share this on Linkedin"
+        onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/zacharyloeber.com\/\/blog\/2015\/04\/06\/exchange-database-leveling-redux\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
+        </svg></div>
 </div>
-
+    </div>
 </article>
 
             
@@ -451,30 +571,145 @@
 
     
 <div class="footer">
-
-
     
+
+        
         <div class="tags">
             <i class="fa fa-tags"></i>
             <div class="links">
                 
-                    <a href="/tags/exchange-2010">Exchange 2010</a>
+                <a href="/tags/exchange-2010">Exchange 2010</a>
                 
-                    <a href="/tags/exchange-2013">Exchange 2013</a>
+                <a href="/tags/exchange-2013">Exchange 2013</a>
                 
-                    <a href="/tags/powershell">Powershell</a>
+                <a href="/tags/powershell">Powershell</a>
                 
-                    <a href="/tags/scripting">Scripting</a>
+                <a href="/tags/scripting">Scripting</a>
                 
-                    <a href="/tags/windows">Windows</a>
+                <a href="/tags/windows">Windows</a>
                 
             </div>
         </div>
-    
+        
 
-    
+        
+        
+
+
+<style>
+    #share-buttons {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #share-buttons:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #share-buttons>div {
+        position: relative;
+        text-align: left;
+        height: 36px;
+        width: 32px;
+        float: left;
+        text-align: center;
+    }
+
+    #share-buttons>div>svg {
+        height: 16px;
+        fill: #d5d5d5;
+        margin-top: 10px;
+    }
+
+    #share-buttons>div:hover {
+        cursor: pointer;
+    }
+
+    #share-buttons>div.facebook:hover>svg {
+        fill: #3B5998;
+    }
+
+    #share-buttons>div.twitter:hover>svg {
+        fill: #55ACEE;
+    }
+
+    #share-buttons>div.linkedin:hover>svg {
+        fill: #0077b5;
+    }
+
+    #share-buttons>div.pinterest:hover>svg {
+        fill: #CB2027;
+    }
+
+    #share-buttons>div.gplus:hover>svg {
+        fill: #dd4b39;
+    }
+
+    #share-buttons>div.mail:hover>svg {
+        fill: #7D7D7D;
+    }
+
+    #share-buttons>div.instagram:hover>svg {
+        fill: #C73B92;
+    }
+
+    #share-buttons>div.facebook>svg {
+        height: 18px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.twitter>svg {
+        height: 20px;
+        margin-top: 8px;
+    }
+
+    #share-buttons>div.linkedin>svg {
+        height: 19px;
+        margin-top: 7px;
+    }
+
+    #share-buttons>div.pinterest>svg {
+        height: 20px;
+        margin-top: 9px;
+    }
+
+    #share-buttons>div.gplus>svg {
+        height: 17px;
+        margin-top: 9px;
+        position: relative;
+        left: 1px;
+    }
+
+    #share-buttons>div.mail>svg {
+        height: 14px;
+        margin-top: 11px;
+    }
+</style>
+
+<span style="color: silver;">Share on: </span>
+<div id="share-buttons">
+    <div class="facebook" title="Share this on Facebook"
+        onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/zacharyloeber.com\/\/blog\/2014\/11\/24\/exchange-mailbox-auditing-with-powershell\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
+        </svg></div>
+    <div class="twitter" title="Share this on Twitter"
+        onclick="window.open('http://twitter.com/home?status=https:\/\/zacharyloeber.com\/\/blog\/2014\/11\/24\/exchange-mailbox-auditing-with-powershell\/');"><svg
+            viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
+        </svg></div>
+    <div class="linkedin" title="Share this on Linkedin"
+        onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/zacharyloeber.com\/\/blog\/2014\/11\/24\/exchange-mailbox-auditing-with-powershell\/&title=&summary=&source=');">
+        <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
+        </svg></div>
 </div>
-
+    </div>
 </article>
 
             
