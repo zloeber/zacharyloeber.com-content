@@ -23,12 +23,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/azure/</loc>
+    <loc>https://zacharyloeber.com/categories/azure/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/azure/</loc>
+    <loc>https://zacharyloeber.com/tags/azure/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
@@ -43,12 +43,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/devops/</loc>
+    <loc>https://zacharyloeber.com/categories/devops/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/devops/</loc>
+    <loc>https://zacharyloeber.com/tags/devops/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
@@ -93,12 +93,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
+    <loc>https://zacharyloeber.com/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/</loc>
+    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
@@ -148,12 +148,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/docker/</loc>
+    <loc>https://zacharyloeber.com/categories/docker/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/docker/</loc>
+    <loc>https://zacharyloeber.com/tags/docker/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
@@ -313,12 +313,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/skype-for-business/</loc>
+    <loc>https://zacharyloeber.com/categories/skype-for-business/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/skype-for-business/</loc>
+    <loc>https://zacharyloeber.com/tags/skype-for-business/</loc>
     <lastmod>2017-09-10T20:38:59+00:00</lastmod>
   </url>
   
@@ -373,12 +373,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/networking/</loc>
+    <loc>https://zacharyloeber.com/categories/networking/</loc>
     <lastmod>2017-01-31T03:23:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/networking/</loc>
+    <loc>https://zacharyloeber.com/tags/networking/</loc>
     <lastmod>2017-01-31T03:23:32+00:00</lastmod>
   </url>
   
@@ -418,12 +418,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/ossposh/</loc>
+    <loc>https://zacharyloeber.com/tags/ossposh/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/ossposh/</loc>
+    <loc>https://zacharyloeber.com/categories/ossposh/</loc>
     <lastmod>2016-08-21T03:41:03+00:00</lastmod>
   </url>
   
@@ -438,12 +438,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/exchange-2013/</loc>
+    <loc>https://zacharyloeber.com/categories/exchange-2013/</loc>
     <lastmod>2016-04-19T21:25:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/exchange-2013/</loc>
+    <loc>https://zacharyloeber.com/tags/exchange-2013/</loc>
     <lastmod>2016-04-19T21:25:58+00:00</lastmod>
   </url>
   
