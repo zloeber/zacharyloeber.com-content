@@ -141,9 +141,44 @@
     
         <p>I ran into this issue recently. End users experienced a red splat in communicator exhibiting that there was an issue syncing the corporate address book. I found <a title="OCS 2007 R2 CRL Issue" href="http://blog.danovich.com.au/2009/11/04/office-communicator-error-cannot-synchronize-address-book/" target="_blank">this excellent article</a> explaining how an invalid Certificate Revocation List error may be causing this issue. My issue was slightly similar in nature but with some caveats.</p>
 
-        
-            <a href="https://zacharyloeber.com/blog/2011/03/31/ocs-2007-r2-crl-issue-causing-address-book-download-error/" class="more">Continue reading</a>
-        
+<p>Firstly I had no issues getting to the CRL that was published. You can get the published CRL distribution points for the OCS pool by going to <a href="https://yourpool.contoso.internal/Abs/Ext/Files/Invalid_AD_Phone_Numbers.txt">https://yourpool.contoso.internal/Abs/Ext/Files/Invalid_AD_Phone_Numbers.txt</a> in IE, clicking on the security lock next to the url in the browser, and selecting &#8220;view certificate&#8221;. From here in the details tab select &#8220;CRL Distribution Points&#8221; and copy the data into notepad for future use.</p>
+
+<p>In my case I had two URLs:</p>
+
+<pre>URL=ldap:///CN=Contoso%20US%20Issuing%20CA%201,CN=CONTOSOCA1,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=contoso,DC=internal?certificateRevocationList?base?objectClass=cRLDistributionPoint
+URL=http://internal.contoso.com/pki/Contoso%20US%20Issuing%20CA%201+.crl</pre>
+
+<p>If I went directly to the http URL I was able to download the crl without issues. I was not certain how to test the ldap URL but a quick search gave me what I needed to do so:</p>
+
+<pre>certutil -URL ldap:///CN=Contoso%20US%20IssuingCA%201,CN=CONTOSOCA1,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=contoso,DC=internal?certificateRevocationList?base?objectClass=cRLDistributionPoint</pre>
+
+<p>When the interface comes up select the Retrieve button to grab the CRLs (from CDP). You should get a list that comes up of the Base CRL and some deltas. In my case though the HTTP Url showed as &#8220;Failed&#8221;. As I knew that the URL did work properly from a manual check I was a bit perplexed as to why this was showing as failed.</p>
+
+<p>Well what it ended up being was that the original site for which the CRL HTTP URL was published was migrated from an older IIS5 server to IIS7.5 and <a title="IIS7 and the plus sign" href="http://www.ifinity.com.au/Blog/EntryId/60/404-Error-in-IIS-7-when-using-a-Url-with-a-plus-sign-in-the-path" target="_blank">IIS 7.5 doesn&#8217;t respond well to the &#8220;+&#8221; character in URLs apparently</a>. The resolution was to <a title="Convince IIS7.5 that plusses are spaces" href="http://n8v.enteuxis.org/2010/07/convincing-iis7-to-accept-urls-containing-plusses/" target="_blank">convince IIS7.5 that pluses are spaces</a> (alternatively don&#8217;t use the + character in your published CRL URL or filenames).</p>
+
+<p>After this was resolved I tested communicator after setting the GAL download initial delay to zero with a registry hack.</p>
+
+<p>For 32 bit OSes:</p>
+
+<pre>Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Communicator]
+“GalDownloadInitialDelay”=dword:00000000</pre>
+
+<p>For 64 bit OSes:</p>
+
+<pre>Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Wow6432Node\Policies\Microsoft\Communicator]
+“GalDownloadInitialDelay”=dword:00000000</pre>
+
+<p>When I restarted Communicator the red splat went away for a few hours but eventually came back. After resetting the front end OCS servers it went away permanently.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
     
 </div>
 
@@ -215,22 +250,6 @@
         fill: #0077b5;
     }
 
-    #share-buttons>div.pinterest:hover>svg {
-        fill: #CB2027;
-    }
-
-    #share-buttons>div.gplus:hover>svg {
-        fill: #dd4b39;
-    }
-
-    #share-buttons>div.mail:hover>svg {
-        fill: #7D7D7D;
-    }
-
-    #share-buttons>div.instagram:hover>svg {
-        fill: #C73B92;
-    }
-
     #share-buttons>div.facebook>svg {
         height: 18px;
         margin-top: 9px;
@@ -245,33 +264,16 @@
         height: 19px;
         margin-top: 7px;
     }
-
-    #share-buttons>div.pinterest>svg {
-        height: 20px;
-        margin-top: 9px;
-    }
-
-    #share-buttons>div.gplus>svg {
-        height: 17px;
-        margin-top: 9px;
-        position: relative;
-        left: 1px;
-    }
-
-    #share-buttons>div.mail>svg {
-        height: 14px;
-        margin-top: 11px;
-    }
 </style>
 <div id="share-buttons">
     <div class="facebook" title="Share this on Facebook"
-        onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/zacharyloeber.com\/\/blog\/2011\/03\/31\/ocs-2007-r2-crl-issue-causing-address-book-download-error\/');"><svg
+        onclick="window.open('https://www.facebook.com/share.php?u=https:\/\/zacharyloeber.com\/\/blog\/2011\/03\/31\/ocs-2007-r2-crl-issue-causing-address-book-download-error\/');"><svg
             viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
         </svg></div>
     <div class="twitter" title="Share this on Twitter"
-        onclick="window.open('http://twitter.com/home?status=https:\/\/zacharyloeber.com\/\/blog\/2011\/03\/31\/ocs-2007-r2-crl-issue-causing-address-book-download-error\/');"><svg
+        onclick="window.open('https://twitter.com/home?status=https:\/\/zacharyloeber.com\/\/blog\/2011\/03\/31\/ocs-2007-r2-crl-issue-causing-address-book-download-error\/');"><svg
             viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
