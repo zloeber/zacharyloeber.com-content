@@ -5,10 +5,46 @@
     <link>https://zacharyloeber.com/tags/</link>
     <description>Recent content in Tags on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Dec 2019 12:26:30 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 20:59:43 -0600</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://zacharyloeber.com/tags/devops/</link>
+      <pubDate>Sun, 22 Dec 2019 20:59:43 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>helm</title>
+      <link>https://zacharyloeber.com/tags/helm/</link>
+      <pubDate>Sun, 22 Dec 2019 20:59:43 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://zacharyloeber.com/tags/kubernetes/</link>
+      <pubDate>Sun, 22 Dec 2019 20:59:43 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipeline</title>
+      <link>https://zacharyloeber.com/tags/pipeline/</link>
+      <pubDate>Sun, 22 Dec 2019 20:59:43 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/pipeline/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Azure</title>
@@ -29,29 +65,11 @@
     </item>
     
     <item>
-      <title>DevOps</title>
-      <link>https://zacharyloeber.com/tags/devops/</link>
-      <pubDate>Sun, 08 Dec 2019 12:26:30 -0600</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hugo</title>
       <link>https://zacharyloeber.com/tags/hugo/</link>
       <pubDate>Sun, 08 Dec 2019 12:26:30 -0600</pubDate>
       
       <guid>https://zacharyloeber.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pipeline</title>
-      <link>https://zacharyloeber.com/tags/pipeline/</link>
-      <pubDate>Sun, 08 Dec 2019 12:26:30 -0600</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/pipeline/</guid>
       <description></description>
     </item>
     
@@ -97,15 +115,6 @@
       <pubDate>Fri, 28 Sep 2018 16:49:46 +0000</pubDate>
       
       <guid>https://zacharyloeber.com/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://zacharyloeber.com/tags/kubernetes/</link>
-      <pubDate>Fri, 28 Sep 2018 16:49:46 +0000</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
