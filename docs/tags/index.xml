@@ -5,17 +5,44 @@
     <link>https://zacharyloeber.com/tags/</link>
     <description>Recent content in Tags on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Jan 2020 16:46:26 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 11:00:13 -0600</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Azure Devops</title>
+      <link>https://zacharyloeber.com/tags/azure-devops/</link>
+      <pubDate>Sat, 04 Jan 2020 11:00:13 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/azure-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://zacharyloeber.com/tags/bash/</link>
+      <pubDate>Sat, 04 Jan 2020 11:00:13 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>DevOps</title>
       <link>https://zacharyloeber.com/tags/devops/</link>
-      <pubDate>Wed, 01 Jan 2020 16:46:26 -0600</pubDate>
+      <pubDate>Sat, 04 Jan 2020 11:00:13 -0600</pubDate>
       
       <guid>https://zacharyloeber.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KeyVault</title>
+      <link>https://zacharyloeber.com/tags/keyvault/</link>
+      <pubDate>Sat, 04 Jan 2020 11:00:13 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/keyvault/</guid>
       <description></description>
     </item>
     
