@@ -5,10 +5,73 @@
     <link>https://zacharyloeber.com/tags/</link>
     <description>Recent content in Tags on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Jan 2020 11:00:13 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2020 13:27:15 -0600</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AKS</title>
+      <link>https://zacharyloeber.com/tags/aks/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/aks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>https://zacharyloeber.com/tags/aws/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>https://zacharyloeber.com/tags/azure/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>https://zacharyloeber.com/tags/cloud/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EKS</title>
+      <link>https://zacharyloeber.com/tags/eks/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/eks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>helm</title>
+      <link>https://zacharyloeber.com/tags/helm/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://zacharyloeber.com/tags/kubernetes/</link>
+      <pubDate>Tue, 25 Feb 2020 13:27:15 -0600</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Azure Devops</title>
@@ -47,15 +110,6 @@
     </item>
     
     <item>
-      <title>helm</title>
-      <link>https://zacharyloeber.com/tags/helm/</link>
-      <pubDate>Wed, 01 Jan 2020 16:46:26 -0600</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/helm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>helmfile</title>
       <link>https://zacharyloeber.com/tags/helmfile/</link>
       <pubDate>Wed, 01 Jan 2020 16:46:26 -0600</pubDate>
@@ -65,29 +119,11 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://zacharyloeber.com/tags/kubernetes/</link>
-      <pubDate>Wed, 01 Jan 2020 16:46:26 -0600</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>pipeline</title>
       <link>https://zacharyloeber.com/tags/pipeline/</link>
       <pubDate>Sun, 22 Dec 2019 20:59:43 -0600</pubDate>
       
       <guid>https://zacharyloeber.com/tags/pipeline/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Azure</title>
-      <link>https://zacharyloeber.com/tags/azure/</link>
-      <pubDate>Sun, 08 Dec 2019 12:26:30 -0600</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/azure/</guid>
       <description></description>
     </item>
     
@@ -124,15 +160,6 @@
       <pubDate>Mon, 10 Dec 2018 22:51:46 +0000</pubDate>
       
       <guid>https://zacharyloeber.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>https://zacharyloeber.com/tags/aws/</link>
-      <pubDate>Fri, 28 Sep 2018 16:49:46 +0000</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/aws/</guid>
       <description></description>
     </item>
     
