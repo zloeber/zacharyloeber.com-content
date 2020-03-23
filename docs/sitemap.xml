@@ -18,12 +18,87 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/aks/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
+    <loc>https://zacharyloeber.com/author/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/author/</loc>
+    <loc>https://zacharyloeber.com/categories/azure/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/azure/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/blog/2020/3/23/ado_automated_variable_groups/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/bash/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/blog/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/devops/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/devops/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/pipeline/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/pipeline/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/posts/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/yaml/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/</loc>
+    <lastmod>2020-03-23T11:33:38-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/aks/</loc>
     <lastmod>2020-02-25T13:27:15-06:00</lastmod>
   </url>
   
@@ -33,22 +108,7 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/azure/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/categories/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/cloud/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/categories/devops/</loc>
     <lastmod>2020-02-25T13:27:15-06:00</lastmod>
   </url>
   
@@ -78,47 +138,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/posts/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/2020/01/ado-keyvault-linked-var-groups/</loc>
     <lastmod>2020-01-04T11:00:13-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/azure/</loc>
-    <lastmod>2020-01-04T11:00:13-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/azure-devops/</loc>
-    <lastmod>2020-01-04T11:00:13-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/bash/</loc>
-    <lastmod>2020-01-04T11:00:13-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/devops/</loc>
     <lastmod>2020-01-04T11:00:13-06:00</lastmod>
   </url>
   
@@ -143,18 +168,8 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/pipeline/</loc>
-    <lastmod>2019-12-22T20:59:43-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/blog/2019/12/15/some_cool_kubernetes_tools/</loc>
     <lastmod>2019-12-22T20:59:43-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/blog/</loc>
-    <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
   <url>
@@ -169,16 +184,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/blog/2019/12/8/hugo-a-devops-approach/</loc>
-    <lastmod>2019-12-08T12:26:30-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/categories/pipeline/</loc>
-    <lastmod>2019-12-08T12:26:30-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/yaml/</loc>
     <lastmod>2019-12-08T12:26:30-06:00</lastmod>
   </url>
   
@@ -223,12 +228,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/docker/</loc>
+    <loc>https://zacharyloeber.com/tags/docker/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/docker/</loc>
+    <loc>https://zacharyloeber.com/categories/docker/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
@@ -278,12 +283,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/python/</loc>
+    <loc>https://zacharyloeber.com/tags/python/</loc>
     <lastmod>2018-05-03T02:29:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/python/</loc>
+    <loc>https://zacharyloeber.com/categories/python/</loc>
     <lastmod>2018-05-03T02:29:53+00:00</lastmod>
   </url>
   
@@ -438,12 +443,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/networking/</loc>
+    <loc>https://zacharyloeber.com/tags/networking/</loc>
     <lastmod>2017-01-31T03:23:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/networking/</loc>
+    <loc>https://zacharyloeber.com/categories/networking/</loc>
     <lastmod>2017-01-31T03:23:32+00:00</lastmod>
   </url>
   
@@ -503,12 +508,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/exchange-2013/</loc>
+    <loc>https://zacharyloeber.com/tags/exchange-2013/</loc>
     <lastmod>2016-04-19T21:25:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/exchange-2013/</loc>
+    <loc>https://zacharyloeber.com/categories/exchange-2013/</loc>
     <lastmod>2016-04-19T21:25:58+00:00</lastmod>
   </url>
   
@@ -553,12 +558,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/exchange-2010/</loc>
+    <loc>https://zacharyloeber.com/tags/exchange-2010/</loc>
     <lastmod>2015-09-25T01:41:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/exchange-2010/</loc>
+    <loc>https://zacharyloeber.com/categories/exchange-2010/</loc>
     <lastmod>2015-09-25T01:41:25+00:00</lastmod>
   </url>
   
@@ -1163,12 +1168,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/ubuntu/</loc>
+    <loc>https://zacharyloeber.com/tags/ubuntu/</loc>
     <lastmod>2012-11-29T02:24:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/ubuntu/</loc>
+    <loc>https://zacharyloeber.com/categories/ubuntu/</loc>
     <lastmod>2012-11-29T02:24:46+00:00</lastmod>
   </url>
   
@@ -1373,12 +1378,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/fiber/</loc>
+    <loc>https://zacharyloeber.com/tags/fiber/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/fiber/</loc>
+    <loc>https://zacharyloeber.com/categories/fiber/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
@@ -1388,12 +1393,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/virtual-connect/</loc>
+    <loc>https://zacharyloeber.com/tags/virtual-connect/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/virtual-connect/</loc>
+    <loc>https://zacharyloeber.com/categories/virtual-connect/</loc>
     <lastmod>2011-02-04T01:14:02+00:00</lastmod>
   </url>
   
