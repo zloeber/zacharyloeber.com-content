@@ -5,10 +5,19 @@
     <link>https://zacharyloeber.com/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 25 Feb 2020 13:27:15 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 12:31:40 -0500</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes App Deployments with Terraform</title>
+      <link>https://zacharyloeber.com/blog/2020/04/02/kubernetes-app-deployments-with-terraform/</link>
+      <pubDate>Thu, 02 Apr 2020 12:31:40 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/blog/2020/04/02/kubernetes-app-deployments-with-terraform/</guid>
+      <description>&lt;p&gt;Deploying applications via the kubernetes terraform provider is a viable solution for some workloads.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Managed Kubernetes Idiosyncracies</title>
@@ -44,8 +53,8 @@
       
       <guid>https://zacharyloeber.com/blog/2018/09/28/devops-automating-kubernetes-deployments/</guid>
       <description>If you are deploying your own Kubernetes clusters you already know that:
- Kubernetes is hard  But there is hope!
-There are a few great projects to keep an eye on in this space. I&amp;#8217;ve covered some of them in an article you can read on the Lumen.
+But there is hope!
+There are a few great projects to keep an eye on in this space. I’ve covered some of them in an article you can read on the Lumen.
 Cheers!</description>
     </item>
     
