@@ -5,10 +5,19 @@
     <link>https://zacharyloeber.com/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Apr 2020 11:33:38 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 10:47:59 -0500</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes API Specs</title>
+      <link>https://zacharyloeber.com/2020/04/kubernetes-api-specs/</link>
+      <pubDate>Thu, 16 Apr 2020 10:47:59 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/2020/04/kubernetes-api-specs/</guid>
+      <description>&lt;p&gt;Can you quickly list out all the available pod security policy attributes on Kubernetes? How about listing the autoscaling apiVersions along with thier spec attributes?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>DevOps Patterns</title>

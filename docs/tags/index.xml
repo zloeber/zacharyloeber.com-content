@@ -5,15 +5,24 @@
     <link>https://zacharyloeber.com/tags/</link>
     <description>Recent content in Tags on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Apr 2020 11:33:38 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 10:47:59 -0500</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>API</title>
+      <link>https://zacharyloeber.com/tags/api/</link>
+      <pubDate>Thu, 16 Apr 2020 10:47:59 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>DevOps</title>
       <link>https://zacharyloeber.com/tags/devops/</link>
-      <pubDate>Mon, 13 Apr 2020 11:33:38 -0600</pubDate>
+      <pubDate>Thu, 16 Apr 2020 10:47:59 -0500</pubDate>
       
       <guid>https://zacharyloeber.com/tags/devops/</guid>
       <description></description>
@@ -22,7 +31,7 @@
     <item>
       <title>Kubernetes</title>
       <link>https://zacharyloeber.com/tags/kubernetes/</link>
-      <pubDate>Mon, 13 Apr 2020 11:33:38 -0600</pubDate>
+      <pubDate>Thu, 16 Apr 2020 10:47:59 -0500</pubDate>
       
       <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
       <description></description>
