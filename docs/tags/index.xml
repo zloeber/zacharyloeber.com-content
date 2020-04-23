@@ -5,10 +5,55 @@
     <link>https://zacharyloeber.com/tags/</link>
     <description>Recent content in Tags on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 16 Apr 2020 10:47:59 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 10:22:48 -0500</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://zacharyloeber.com/tags/devops/</link>
+      <pubDate>Mon, 20 Apr 2020 10:22:48 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://zacharyloeber.com/tags/kubernetes/</link>
+      <pubDate>Mon, 20 Apr 2020 10:22:48 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>libvirt</title>
+      <link>https://zacharyloeber.com/tags/libvirt/</link>
+      <pubDate>Mon, 20 Apr 2020 10:22:48 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/libvirt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qemu</title>
+      <link>https://zacharyloeber.com/tags/qemu/</link>
+      <pubDate>Mon, 20 Apr 2020 10:22:48 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/qemu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://zacharyloeber.com/tags/terraform/</link>
+      <pubDate>Mon, 20 Apr 2020 10:22:48 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/tags/terraform/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>API</title>
@@ -20,38 +65,11 @@
     </item>
     
     <item>
-      <title>DevOps</title>
-      <link>https://zacharyloeber.com/tags/devops/</link>
-      <pubDate>Thu, 16 Apr 2020 10:47:59 -0500</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://zacharyloeber.com/tags/kubernetes/</link>
-      <pubDate>Thu, 16 Apr 2020 10:47:59 -0500</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>pipeline</title>
       <link>https://zacharyloeber.com/tags/pipeline/</link>
       <pubDate>Mon, 13 Apr 2020 11:33:38 -0600</pubDate>
       
       <guid>https://zacharyloeber.com/tags/pipeline/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>terraform</title>
-      <link>https://zacharyloeber.com/tags/terraform/</link>
-      <pubDate>Thu, 02 Apr 2020 12:31:40 -0500</pubDate>
-      
-      <guid>https://zacharyloeber.com/tags/terraform/</guid>
       <description></description>
     </item>
     
