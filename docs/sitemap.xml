@@ -13,23 +13,53 @@
   </url>
   
   <url>
+    <loc>https://zacharyloeber.com/2020/04/artifact-types/</loc>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zacharyloeber.com/author/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/categories/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/cicd/</loc>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/devops/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/categories/devops/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/posts/</loc>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/</loc>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/</loc>
+    <lastmod>2020-04-29T13:55:09-05:00</lastmod>
   </url>
   
   <url>
@@ -53,17 +83,7 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/posts/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/qemu/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/</loc>
     <lastmod>2020-04-20T10:22:48-05:00</lastmod>
   </url>
   
@@ -74,16 +94,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/categories/terraform/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/</loc>
     <lastmod>2020-04-20T10:22:48-05:00</lastmod>
   </url>
   
