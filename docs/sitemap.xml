@@ -14,26 +14,91 @@
   
   <url>
     <loc>https://zacharyloeber.com/author/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/bash/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
+    <loc>https://zacharyloeber.com/tags/aws/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/aws/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/2020/05/aws-testing-with-localstack-on-kubernetes/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/categories/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/devops/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/categories/devops/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/docker/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/helm/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/helmfile/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/kubernetes/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/kubernetes/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/localstack/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/posts/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/</loc>
+    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/bash/</loc>
     <lastmod>2020-05-06T09:59:02-05:00</lastmod>
   </url>
   
@@ -48,37 +113,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/categories/kubernetes/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/makefile/</loc>
     <lastmod>2020-05-06T09:59:02-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/posts/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/2020/05/the-istio-rabbithole/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
-    <lastmod>2020-05-06T09:59:02-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/</loc>
     <lastmod>2020-05-06T09:59:02-05:00</lastmod>
   </url>
   
@@ -90,11 +130,6 @@
   <url>
     <loc>https://zacharyloeber.com/tags/cicd/</loc>
     <lastmod>2020-04-29T13:55:09-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/kubernetes/</loc>
-    <lastmod>2020-04-20T10:22:48-05:00</lastmod>
   </url>
   
   <url>
@@ -188,22 +223,12 @@
   </url>
   
   <url>
-    <loc>https://zacharyloeber.com/tags/aws/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zacharyloeber.com/tags/cloud/</loc>
     <lastmod>2020-02-25T13:27:15-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/eks/</loc>
-    <lastmod>2020-02-25T13:27:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/helm/</loc>
     <lastmod>2020-02-25T13:27:15-06:00</lastmod>
   </url>
   
@@ -234,11 +259,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/blog/2020/1/1/helm3_namespace_creation/</loc>
-    <lastmod>2020-01-01T16:46:26-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/helmfile/</loc>
     <lastmod>2020-01-01T16:46:26-06:00</lastmod>
   </url>
   
@@ -299,11 +319,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/blog/2018/09/28/devops-automating-kubernetes-deployments/</loc>
-    <lastmod>2018-09-28T16:49:46+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/docker/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
