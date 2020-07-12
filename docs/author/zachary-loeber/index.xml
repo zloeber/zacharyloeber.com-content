@@ -5,7 +5,7 @@
     <link>https://zacharyloeber.com/author/zachary-loeber/</link>
     <description>Recent content on Zachary Loeber</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 May 2020 09:22:20 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 11:05:58 -0500</lastBuildDate>
     
 	<atom:link href="https://zacharyloeber.com/author/zachary-loeber/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       <description>I am IT enthusiast with almost decades of experience. I cut my teeth on a Tandy 2000 and BBS’s of the late 80′s and has been programming, building, and networking computers ever since.
 I&amp;rsquo;m agnostic when it comes to technology but have strong interest in:
  Cloud Architecture DevOps Kubernetes Docker Go Terraform Security Networking System Administration Linux Automation  Some of my other interests include camping, self-improvement, and being a good husband and father.</description>
+    </item>
+    
+    <item>
+      <title>The Declarative Mindset</title>
+      <link>https://zacharyloeber.com/2020/07/the-declarative-mindset/</link>
+      <pubDate>Sat, 11 Jul 2020 11:05:58 -0500</pubDate>
+      
+      <guid>https://zacharyloeber.com/2020/07/the-declarative-mindset/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m going to wax poetic on the virtues of declarative thinking within the IT industry. Along the way we will go over some definitions and introduce the pseudo-declarative manifest and how it can add value to a project.&lt;/p&gt;</description>
     </item>
     
     <item>
