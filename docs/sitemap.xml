@@ -13,43 +13,88 @@
   </url>
   
   <url>
+    <loc>https://zacharyloeber.com/2020/12/2021-it-industry-predictions/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zacharyloeber.com/author/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/automation/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/categories/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/containers/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/declarative-configuration/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/devops/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/categories/devops/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/everything-as-code/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/kubernetes/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/categories/kubernetes/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/posts/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/tags/prediction/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://zacharyloeber.com/tags/terraform/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zacharyloeber.com/</loc>
+    <lastmod>2020-12-15T10:27:05-05:00</lastmod>
   </url>
   
   <url>
@@ -59,16 +104,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/tags/yaml/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/author/zachary-loeber/</loc>
-    <lastmod>2020-07-11T11:05:58-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/</loc>
     <lastmod>2020-07-11T11:05:58-05:00</lastmod>
   </url>
   
@@ -99,11 +134,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/tags/helmfile/</loc>
-    <lastmod>2020-05-21T09:22:20-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/categories/kubernetes/</loc>
     <lastmod>2020-05-21T09:22:20-05:00</lastmod>
   </url>
   
@@ -314,11 +344,6 @@
   
   <url>
     <loc>https://zacharyloeber.com/categories/cicd/</loc>
-    <lastmod>2018-09-28T16:49:46+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zacharyloeber.com/tags/containers/</loc>
     <lastmod>2018-09-28T16:49:46+00:00</lastmod>
   </url>
   
